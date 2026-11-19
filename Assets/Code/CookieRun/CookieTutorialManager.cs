@@ -184,6 +184,7 @@ namespace CookieRun
         private void Update()
         {
             if (!enableTutorial || currentStep == TutorialStep.Completed) return;
+            if (ExhibitMode.InputBlocked) return;
             if (player == null)
             {
                 player = FindObjectOfType<CookiePlayerController>();

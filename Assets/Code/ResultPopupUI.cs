@@ -6,7 +6,8 @@ using UnityEngine.UI;
 /// <summary>
 /// หน้าสรุปผล (GAME OVER / STAGE CLEAR) สร้างด้วยโค้ด ใช้ภาพม้วนกระดาษชุดเดียวกับฉากถ้ำ
 /// ช่อง Time / Traps Cleared / Calories Burned และปุ่ม Home / Restart อยู่ในภาพแล้ว โค้ดนี้วางตัวเลขและตัวเลือกปุ่มทับ
-/// การควบคุม (เหมือนหน้าสรุปผลของฉากถ้ำ): ซ้าย/ขวา = เลือกปุ่ม, เหยียบขึ้น 2 ครั้ง หรือ Enter = ยืนยัน
+/// การควบคุม (เหมือนหน้าสรุปผลของฉากถ้ำ): ซ้าย/ขวา = เลือกปุ่ม, เหยียบขึ้น หรือ Enter = ยืนยัน
+/// แถบบนสุด: ดาว 1-3 ดวง + แคลอรี่เทียบกับการเดิน + อันดับวันนี้ (ภาษาไทย ใช้ฟอนต์ของ Windows)
 /// </summary>
 public class ResultPopupUI : MonoBehaviour
 {
@@ -21,7 +22,11 @@ public class ResultPopupUI : MonoBehaviour
         public string extraLine;       // บรรทัดเพิ่มเติมใต้หัวข้อ (เช่น คะแนน / เหรียญ)
         public Sprite panelOverride;   // ใช้ภาพม้วนกระดาษอื่นแทนภาพมาตรฐาน (เช่น หัวข้อช่องกลางต่างไป)
         public string statsLine;       // สรุปการเคลื่อนไหวทั้งหมด (แถบใต้ม้วนกระดาษ)
+        public int stars;              // ดาว 1-3 (0 = ไม่แสดง)
+        public string rankLine;        // อันดับวันนี้ (ว่าง = ไม่แสดง)
     }
+
+    public static bool IsOpen => current != null;
 
     // ตำแหน่งในภาพ (สัดส่วน 0-1 จากมุมซ้ายบน) ของช่องข้อมูลและปุ่มที่วาดไว้ในภาพ
     private static readonly Rect TimeBox = new Rect(0.16f, 0.465f, 0.186f, 0.205f);
@@ -37,8 +42,7 @@ public class ResultPopupUI : MonoBehaviour
     private const KeyCode PadAction = KeyCode.Joystick1Button0;
 
     [Tooltip("หน่วงเวลาก่อนรับปุ่ม กันเท้าที่ยังเหยียบแผ่นอยู่กดโดยไม่ตั้งใจ")]
-    public float inputDelay = 0.8f;
-    public float doubleTapThreshold = 0.5f;
+    public float inputDelay = 1.0f;
 
     private Action onHome;
     private Action onRestart;
@@ -46,7 +50,6 @@ public class ResultPopupUI : MonoBehaviour
     private Image[] highlights;
     private int selected = 1;               // เริ่มที่ Restart
     private float shownAt;
-    private float lastUpTime = -10f;
     private bool done;
     private AudioSource audioSource;
 
@@ -131,15 +134,16 @@ public class ResultPopupUI : MonoBehaviour
         highlights[0] = NewButtonOverlay("Home", pr, HomeButton, 0);
         highlights[1] = NewButtonOverlay("Restart", pr, RestartButton, 1);
 
-        // คำแนะนำปุ่ม
+        // คำแนะนำปุ่ม (ภาษาไทย ตัวใหญ่)
         Image hintBg = NewImage("HintBg", root, null, new Color(0f, 0f, 0f, 0.55f));
         RectTransform hb = hintBg.rectTransform;
         hb.anchorMin = new Vector2(0f, 0f); hb.anchorMax = new Vector2(1f, 0f);
         hb.pivot = new Vector2(0.5f, 0f);
         hb.sizeDelta = new Vector2(0f, 60f);
-        TextMeshProUGUI hint = NewText("Hint", hb, new Rect(0f, 0f, 1f, 1f), "LEFT / RIGHT : SELECT        STEP UP TWICE (OR ENTER) : CONFIRM", 28f, new Color(1f, 0.88f, 0.55f, 1f));
-        hint.rectTransform.anchorMin = Vector2.zero; hint.rectTransform.anchorMax = Vector2.one;
-        hint.rectTransform.offsetMin = hint.rectTransform.offsetMax = Vector2.zero;
+        Text hint = ExhibitUI.NewText("Hint", hb, "ซ้าย / ขวา = เลือกปุ่ม          เหยียบขึ้น (หรือ Enter) = ยืนยัน", 34, new Color(1f, 0.88f, 0.55f, 1f));
+        ExhibitUI.Stretch(hint.rectTransform);
+
+        BuildTopRibbon(root, data);
 
         shownAt = Time.unscaledTime;
         RefreshHighlight();
@@ -166,11 +170,8 @@ public class ResultPopupUI : MonoBehaviour
         if (Input.GetKeyDown(PadLeft) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) Select(selected - 1);
         else if (Input.GetKeyDown(PadRight) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) Select(selected + 1);
 
-        if (Input.GetKeyDown(PadUp) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            if (Time.unscaledTime - lastUpTime <= doubleTapThreshold) { Confirm(); return; }
-            lastUpTime = Time.unscaledTime;
-        }
+        // เหยียบขึ้นครั้งเดียว = ยืนยัน (มีหน่วงเวลาตอนเปิดหน้านี้ กันเท้าที่เหยียบค้างจากในเกม)
+        if (Input.GetKeyDown(PadUp) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) { Confirm(); return; }
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(PadAction)) Confirm();
     }
@@ -199,6 +200,37 @@ public class ResultPopupUI : MonoBehaviour
         if (selected == 0) onHome?.Invoke();
         else if (onNext != null) onNext.Invoke();
         else onRestart?.Invoke();
+    }
+
+    /// <summary>แถบบนสุด: ดาว + แคลอรี่เทียบกับการเดิน + อันดับวันนี้</summary>
+    private void BuildTopRibbon(RectTransform root, Data data)
+    {
+        var ribbon = new GameObject("TopRibbon", typeof(RectTransform));
+        ribbon.transform.SetParent(root, false);
+        RectTransform rr = (RectTransform)ribbon.transform;
+        rr.anchorMin = rr.anchorMax = new Vector2(0.5f, 1f);
+        rr.pivot = new Vector2(0.5f, 1f);
+        rr.anchoredPosition = new Vector2(0f, -6f);
+        rr.sizeDelta = new Vector2(1800f, 92f);
+        Image bg = ExhibitUI.NewPanel("Bg", ribbon.transform, new Color(0.2f, 0.1f, 0.04f, 0.9f), new Color(0.86f, 0.62f, 0.2f, 1f));
+        ExhibitUI.Stretch(bg.rectTransform);
+
+        float textX = 0f;
+        if (data.stars > 0)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Image s = ExhibitUI.NewImage("Star" + i, ribbon.transform, ExhibitUI.StarSprite,
+                    i < data.stars ? new Color(1f, 0.82f, 0.25f) : new Color(1f, 1f, 1f, 0.2f));
+                ExhibitUI.Place(s.rectTransform, -760 + i * 78, 0, 72, 72);
+            }
+            textX = 130f;
+        }
+
+        string info = data.calories > 0f ? ResultHelpers.KcalCompare(data.calories) : "";
+        if (!string.IsNullOrEmpty(data.rankLine)) info += (info.Length > 0 ? "      |      " : "") + data.rankLine;
+        Text t = ExhibitUI.NewText("Info", ribbon.transform, info, 38, new Color(1f, 0.93f, 0.78f));
+        ExhibitUI.Place(t.rectTransform, textX, 0, 1500, 80);
     }
 
     /// <summary>แถบไม้ใต้ม้วนกระดาษ แสดงสรุปการเคลื่อนไหวทั้งหมดของรอบนี้</summary>

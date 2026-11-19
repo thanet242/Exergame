@@ -92,6 +92,14 @@ namespace CookieRun
         private void Update()
         {
             if (health == null) return;
+            // จำนวนหัวใจสูงสุดเปลี่ยน (เลือกระดับ "สบาย ๆ" ที่การ์ดสอนเล่น): สร้างแถวหัวใจใหม่
+            if (hearts != null && hearts.Length != health.MaxHearts)
+            {
+                for (int i = transform.childCount - 1; i >= 0; i--) Destroy(transform.GetChild(i).gameObject);
+                ((RectTransform)transform).sizeDelta = new Vector2(Spacing * (health.MaxHearts + 1), HeartHeight);
+                shownHearts = -1;
+                Init(health, player);
+            }
             Refresh(false);
             Animate();
         }

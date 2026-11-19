@@ -34,9 +34,27 @@ namespace CookieRun
         public bool IsDead => isDead;
         public bool IsImmune { get => isImmune; set => isImmune = value; }
 
+        private int baseMaxHearts = -1;
+
         private void Awake()
         {
+            baseMaxHearts = maxHearts;
+            if (ExhibitMode.Relaxed) maxHearts = baseMaxHearts + RelaxedBonusHearts;
             currentHealth = maxHearts;
+        }
+
+        /// <summary>ระดับ "สบาย ๆ" ของงานแสดง: หัวใจเพิ่ม 2 ดวง</summary>
+        private const int RelaxedBonusHearts = 2;
+
+        /// <summary>ใช้ระดับที่เลือกจากการ์ดสอนเล่น (เรียกหลังปิดการ์ด ตอนยังไม่เริ่มวิ่ง)</summary>
+        public void ApplyDifficulty()
+        {
+            if (baseMaxHearts < 0 || isDead) return;
+            int target = baseMaxHearts + (ExhibitMode.Relaxed ? RelaxedBonusHearts : 0);
+            if (target == maxHearts) return;
+            maxHearts = target;
+            currentHealth = maxHearts;
+            OnHealthChanged?.Invoke(currentHealth, maxHearts);
         }
 
         private void Start()

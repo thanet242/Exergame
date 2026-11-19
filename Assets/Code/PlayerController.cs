@@ -125,6 +125,8 @@ public class PlayerController : MonoBehaviour
     [Header("Double Tap Settings")]
     [Range(0.1f, 0.8f)]
     public float doubleTapTimeWindow = 0.4f;
+    [Tooltip("ค่า METs ของการเล่นด่านถ้ำ (เดิน/ขุด/คิด สลับกัน) ใช้คำนวณแคลอรี่เมื่อด่านไม่มี StageConfig")]
+    public float caveExerciseMETs = 3.5f;
     private float lastTapTime = -1f;
     private KeyCode lastTappedKey = KeyCode.None;
 
@@ -238,6 +240,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (isDead || isStageFinished) return;
+
+        // การ์ดสอนเล่น / หน้าหยุดเกมของงานแสดงเปิดอยู่: ไม่รับปุ่ม และยกเลิกการเหยียบค้างที่ค้างอยู่ (ไม่ให้ปักธงตอนปล่อยเท้า)
+        if (ExhibitMode.InputBlocked)
+        {
+            isInFlagReadyMode = false;
+            currentFlagHoldingKey = KeyCode.None;
+            flagHoldTimer = 0f;
+            lastTappedKey = KeyCode.None;
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.N))
         {
@@ -534,6 +546,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ช่วงเวลาเหยียบซ้ำเพื่อขุด/ตี: งานแสดงขยายเป็นอย่างน้อย 0.7 วินาที ให้เด็กและผู้สูงอายุเหยียบทัน
+    /// (เหยียบซ้ำตอนไม่มีหินหรือมอนสเตอร์ข้างหน้าจะไม่มีผลอะไร จึงไม่กระทบการเดิน)
+    /// </summary>
+    public float DoubleTapWindow => ExhibitMode.On ? Mathf.Max(doubleTapTimeWindow, 0.7f) : doubleTapTimeWindow;
+
     void CheckDirectionDoubleTap()
     {
         KeyCode[] directionalKeys = GameInputBindings.MoveKeys;
@@ -546,7 +564,7 @@ public class PlayerController : MonoBehaviour
 
                 float timeSinceLastTap = Time.time - lastTapTime;
 
-                if (key == lastTappedKey && timeSinceLastTap <= doubleTapTimeWindow)
+                if (key == lastTappedKey && timeSinceLastTap <= DoubleTapWindow)
                 {
                     ExecuteActionAttackAndDig();
                     lastTapTime = -1f;
@@ -1155,6 +1173,8 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
 
+        // ระดับ "สบาย ๆ" (เลือกที่การ์ดสอนเล่น): โดนกับดัก/มอนสเตอร์เสียเลือดครึ่งเดียว
+        if (ExhibitMode.Relaxed) amount *= 0.5f;
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
         UpdateHealthBarUI();
@@ -1230,7 +1250,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.2f);
 
         // ทุกด่านถ้ำใช้หน้าสรุปผลม้วนกระดาษชุดเดียวกัน พร้อมสรุปการเคลื่อนไหวทั้งหมด
-        ResultPopupUI.Show(ResultPopupUI.Kind.GameOver, BuildResultData(),
+        ResultPopupUI.Data data = BuildResultData();
+        data.stars = 1; // เล่นจนจบได้ 1 ดาวเสมอ ให้กำลังใจ
+        ResultPopupUI.Show(ResultPopupUI.Kind.GameOver, data,
             () => SceneManager.LoadScene("Mainmenu"),
             () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex));
     }
@@ -1238,9 +1260,10 @@ public class PlayerController : MonoBehaviour
     /// <summary>รวบรวมข้อมูลของรอบนี้สำหรับหน้าสรุปผล (เวลา / เคลียร์ได้ / แคลอรี่ / การเคลื่อนไหวทั้งหมด)</summary>
     private ResultPopupUI.Data BuildResultData()
     {
+        // สูตรเดียวกับทุกเกม: METs x เวลา x น้ำหนัก (ด่านที่มี StageConfig ใช้ค่าของด่านนั้น)
         float calories = stageConfig != null
             ? stageConfig.CalculateCalories()
-            : (stepCount * 0.04f) + (digCount * 0.1f) + (attackCount * 0.08f);
+            : ResultHelpers.CaloriesFromMets(caveExerciseMETs, Time.timeSinceLevelLoad);
         int totalTraps = Mathf.Max(0, totalBombs + totalMonsters);
 
         string stats = $"STEPS <color=#FFD36B>{stepCount}</color>    DIGS <color=#FFD36B>{digCount}</color>    " +
@@ -1352,7 +1375,10 @@ public class PlayerController : MonoBehaviour
 
         // มีด่านถ้ำถัดไป -> ปุ่มขวาเป็น Next / ด่านสุดท้าย -> Restart
         System.Action onNext = HasNextCaveStage() ? (System.Action)(() => OnClickNextButton()) : null;
-        ResultPopupUI.Show(ResultPopupUI.Kind.StageClear, BuildResultData(),
+        ResultPopupUI.Data data = BuildResultData();
+        // ผ่านด่าน = 2 ดาว / เลือดเหลือ 70% ขึ้นไป = 3 ดาว
+        data.stars = currentHealth >= maxHealth * 0.7f ? 3 : 2;
+        ResultPopupUI.Show(ResultPopupUI.Kind.StageClear, data,
             () => SceneManager.LoadScene("Mainmenu"),
             () => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex),
             onNext);

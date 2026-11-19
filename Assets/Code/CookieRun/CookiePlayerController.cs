@@ -291,6 +291,8 @@ namespace CookieRun
 
             // เกมหยุดชั่วคราว (เช่น ช่วงสอนเล่น) ไม่รับปุ่ม เพื่อไม่ให้กระโดดซ้อนกับคำสั่งของ Tutorial
             if (Time.timeScale <= 0f) return;
+            // เฟรมที่เพิ่งปิดการ์ดสอนเล่น/หน้าหยุดเกม: ปุ่มที่กดปิดไม่นับเป็นกระโดด/สไลด์
+            if (ExhibitMode.InputBlocked) return;
 
             CheckGrounded();
             HandleInput();

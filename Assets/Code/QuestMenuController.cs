@@ -44,13 +44,15 @@ public class QuestMenuController : MonoBehaviour
     public KeyCode rightKey = KeyCode.Joystick1Button3;    // แผ่นด้านขวา (เลื่อนป้ายถัดไป)[cite: 3]
     public KeyCode actionConfirmKey = KeyCode.Joystick1Button0; //[cite: 3]
 
-    [Header("4. การตั้งค่า Double-Tap (ปุ่มบนเพื่อยืนยัน)")]
-    public float doubleTapThreshold = 0.5f; //[cite: 3]
-    private float lastUpPressTime = -1f; //[cite: 3]
+    [Header("4. ยืนยัน (เหยียบขึ้นครั้งเดียว)")]
+    [Tooltip("หน่วงเวลาหลังเปิดหน้า ก่อนรับการเหยียบยืนยัน")]
+    public float confirmDelay = 0.5f;
 
-    [Header("5. เหยียบค้าง 3 วินาที (Hold to Close / Back)")]
+    [Header("5. เหยียบลงค้าง (Hold to Close / Back)")]
     public string mainMenuSceneName = "MainMenu"; //[cite: 3]
-    public float holdDuration = 3.0f; //[cite: 3]
+    [Tooltip("เหยียบลงค้างนานเท่านี้ = กลับหน้าแรก (สูงสุด 2 วินาที ให้ทุกวัยค้างไหว)")]
+    public float holdDuration = 2.0f; //[cite: 3]
+    private float HoldSeconds => Mathf.Min(holdDuration, 2f);
     private float currentHoldTimer = 0f; //[cite: 3]
 
     private int currentIndex = 0; //[cite: 3]
@@ -59,7 +61,7 @@ public class QuestMenuController : MonoBehaviour
     /// <summary>เควสที่เลือกอยู่ (ใช้โดย QuestBoardDecor แสดงกรอบเรืองแสงและชื่อเควส)</summary>
     public int CurrentIndex => currentIndex;
     /// <summary>ความคืบหน้าการเหยียบค้างเพื่อกลับเมนู 0-1</summary>
-    public float HoldProgress => holdDuration > 0f ? Mathf.Clamp01(currentHoldTimer / holdDuration) : 0f;
+    public float HoldProgress => HoldSeconds > 0f ? Mathf.Clamp01(currentHoldTimer / HoldSeconds) : 0f;
 
     void Awake()
     {
@@ -128,19 +130,11 @@ public class QuestMenuController : MonoBehaviour
 
         if (currentHoldTimer > 0.3f) return; //[cite: 3]
 
-        // ตรวจจับการ Double-Tap ปุ่มบน (UP) เพื่อยืนยัน
-        if (Input.GetKeyDown(upKey) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) //[cite: 3]
+        // เหยียบขึ้นครั้งเดียว = เริ่มเควสที่เลือก (หน่วงเวลาสั้นๆ หลังเปิดหน้า กันเท้าที่เหยียบค้างมาจากหน้าก่อน)
+        if (Input.GetKeyDown(upKey) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
-            float timeSinceLast = Time.time - lastUpPressTime; //[cite: 3]
-
-            if (timeSinceLast <= doubleTapThreshold) //[cite: 3]
-            {
-                OnConfirmAction();
-                lastUpPressTime = -1f; //[cite: 3]
-                return;
-            }
-
-            lastUpPressTime = Time.time; //[cite: 3]
+            if (Time.timeSinceLevelLoad >= confirmDelay) OnConfirmAction();
+            return;
         }
 
         // ยืนยันผ่าน Keyboard (Enter / Space) หรือปุ่ม Action
@@ -280,20 +274,15 @@ public class QuestMenuController : MonoBehaviour
 
     void HandleHoldToBack()
     {
-        bool isPressing = Input.GetKey(leftKey) || Input.GetKey(rightKey) || 
-                          Input.GetKey(upKey) || Input.GetKey(downKey) || 
-                          Input.GetKey(actionConfirmKey) ||
-                          Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) ||
-                          Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) ||
-                          Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || 
-                          Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
-                          Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Backspace); //[cite: 3]
+        // เหยียบลงค้างเท่านั้น (เดิมนับทุกปุ่ม: คนที่ยืนพักบนแผ่นซ้าย/ขวา เด้งกลับหน้าแรกโดยไม่ตั้งใจ)
+        bool isPressing = Input.GetKey(downKey) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S) ||
+                          Input.GetKey(KeyCode.Backspace);
 
         if (isPressing) //[cite: 3]
         {
             currentHoldTimer += Time.deltaTime; //[cite: 3]
 
-            if (currentHoldTimer >= holdDuration) //[cite: 3]
+            if (currentHoldTimer >= HoldSeconds)
             {
                 currentHoldTimer = 0f; //[cite: 3]
 

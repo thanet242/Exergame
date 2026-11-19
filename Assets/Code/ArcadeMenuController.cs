@@ -28,20 +28,19 @@ public class ArcadeMenuController : MonoBehaviour
     private AudioSource audioSource;
 
     [Header("Arcade Foot-Pad KeyCodes")]
-    [Tooltip("ปุ่มหน้า (UP) สำหรับ Double-Tap ยืนยัน")]
+    [Tooltip("ปุ่มหน้า (UP) เหยียบครั้งเดียว = ยืนยัน")]
     public KeyCode upKey = KeyCode.Joystick1Button5;
-    [Tooltip("ปุ่มหลัง (DOWN) สำหรับ Double-Tap ยืนยัน")]
+    [Tooltip("ปุ่มหลัง (DOWN) = เลื่อนไปปุ่มถัดไป")]
     public KeyCode downKey = KeyCode.Joystick1Button11;
     [Tooltip("ปุ่มซ้าย (LEFT) สำหรับเลื่อนเลือก")]
     public KeyCode leftKey = KeyCode.Joystick1Button8;
     [Tooltip("ปุ่มขวา (RIGHT) สำหรับเลื่อนเลือก")]
     public KeyCode rightKey = KeyCode.Joystick1Button3;
 
-    [Header("Double-Tap Settings")]
-    [Tooltip("ระยะเวลาสูงสุดในการเหยียบครั้งที่ 2 เพื่อยืนยัน (วินาที)")]
-    public float doubleTapTimeThreshold = 0.5f;
-    private KeyCode lastPressedKey = KeyCode.None;
-    private float lastPressTime = -1f;
+    [Header("Confirm Settings")]
+    [Tooltip("หน่วงเวลาหลังเปิดหน้าเมนู ก่อนรับการเหยียบยืนยัน (กันเท้าที่เหยียบค้างมาจากหน้าก่อน)")]
+    public float confirmDelay = 0.6f;
+    private bool exhibitLayout;
 
     [Header("Scene Settings")]
     public string gameSceneName = "Cave3";
@@ -93,14 +92,58 @@ public class ArcadeMenuController : MonoBehaviour
         BindIfNoPersistentCall(optionBackButton, OnClickCloseOption);
 
         SetupMouseHoverEvents();
+        // แถบด้านล่างอาจยกปุ่มขึ้นพ้นแถบ: สร้างก่อน แล้วค่อยจำตำแหน่งปุ่ม Play เดิมไว้ใช้ตอนปิดโหมดงานแสดง
+        BuildControlsBar();
+        ApplyExhibitLayout();
         UpdateActiveButtonsList();
         SelectButtonByIndex(0, playAudio: false);
-        BuildControlsBar();
     }
 
-    [Header("Controls Bar (แถบบอกปุ่มด้านล่าง)")]
-    [SerializeField] private string controlsHint = "LEFT / RIGHT  ( A / D )  :  SELECT          STEP UP x2  ( W )  or  ENTER  :  CONFIRM          MOUSE  :  CLICK";
+    // แถบบอกปุ่มด้านล่าง: เหยียบขึ้นครั้งเดียว = ยืนยัน (ไม่ต้องเหยียบ 2 ครั้งแล้ว)
+    private const string ControlsHint = "LEFT / RIGHT  :  SELECT          STEP UP  ( W / ENTER )  :  CONFIRM          MOUSE  :  CLICK";
     private GameObject controlsBar;
+
+    // งานแสดง: ซ่อนปุ่ม Option / Exit ไม่ให้ผู้เล่นเปลี่ยนปุ่มหรือปิดโปรแกรม (ทีมงานกด F12 เพื่อเปิดกลับ)
+    void ApplyExhibitLayout()
+    {
+        exhibitLayout = ExhibitMode.On;
+        if (optionButton != null) optionButton.gameObject.SetActive(!exhibitLayout);
+        if (exitButton != null) exitButton.gameObject.SetActive(!exhibitLayout);
+        PlacePlayButton(exhibitLayout);
+    }
+
+    [Tooltip("งานแสดง: ปุ่ม Play อยู่กลางจอ สูงจากขอบล่างเท่านี้ (สัดส่วนความสูงจอ) และขยายขนาดเท่านี้")]
+    public float exhibitPlayHeight = 0.22f;
+    public float exhibitPlaySize = 1.4f;
+    private bool playLayoutSaved;
+    private Vector2 playAnchorMin, playAnchorMax, playPivot, playPos, playSize, playRealSize;
+
+    // ปุ่มอื่นถูกซ่อน: ย้าย Play มากลางจอและขยายให้ใหญ่ขึ้น / ปิดโหมดงานแสดง: คืนตำแหน่งเดิม
+    void PlacePlayButton(bool centered)
+    {
+        if (playButton == null) return;
+        RectTransform rt = (RectTransform)playButton.transform;
+        if (!playLayoutSaved)
+        {
+            playAnchorMin = rt.anchorMin; playAnchorMax = rt.anchorMax; playPivot = rt.pivot;
+            playPos = rt.anchoredPosition; playSize = rt.sizeDelta;
+            playRealSize = rt.rect.size; // ขนาดจริง (กรณี anchor ยืดตามพ่อ sizeDelta ไม่ใช่ขนาดปุ่ม)
+            playLayoutSaved = true;
+        }
+
+        if (centered)
+        {
+            rt.anchorMin = rt.anchorMax = new Vector2(0.5f, exhibitPlayHeight);
+            rt.pivot = new Vector2(0.5f, 0.5f);
+            rt.anchoredPosition = Vector2.zero;
+            rt.sizeDelta = playRealSize * exhibitPlaySize;
+        }
+        else
+        {
+            rt.anchorMin = playAnchorMin; rt.anchorMax = playAnchorMax; rt.pivot = playPivot;
+            rt.anchoredPosition = playPos; rt.sizeDelta = playSize;
+        }
+    }
 
     // แถบด้านล่างจอบอกว่ากดปุ่มอะไรเพื่อทำอะไร (สไตล์เดียวกับแถบล่างหน้า QuestBoard)
     void BuildControlsBar()
@@ -140,7 +183,7 @@ public class ArcadeMenuController : MonoBehaviour
         tr.anchorMin = Vector2.zero; tr.anchorMax = Vector2.one;
         tr.offsetMin = new Vector2(12f, 0f); tr.offsetMax = new Vector2(-12f, 0f);
         TMPro.TextMeshProUGUI t = textGo.AddComponent<TMPro.TextMeshProUGUI>();
-        t.text = controlsHint;
+        t.text = ControlsHint;
         t.alignment = TMPro.TextAlignmentOptions.Center;
         t.fontStyle = TMPro.FontStyles.Bold;
         t.color = new Color(1f, 0.93f, 0.78f, 0.95f);
@@ -178,6 +221,12 @@ public class ArcadeMenuController : MonoBehaviour
     void Update()
     {
         if (controlsBar != null) controlsBar.SetActive(!IsOptionPanelOpen);
+        if (exhibitLayout != ExhibitMode.On && !IsOptionPanelOpen)
+        {
+            ApplyExhibitLayout();
+            UpdateActiveButtonsList();
+            SelectButtonByIndex(0, playAudio: false);
+        }
 
         // หน้า Option แบบใหม่จัดการปุ่มเอง / เฟรมที่เพิ่งปิดหน้า Option ไม่รับปุ่มซ้ำ
         if ((IsOptionPanelOpen && optionMenu != null) || Time.frameCount == optionClosedFrame) return;
@@ -270,9 +319,8 @@ public class ArcadeMenuController : MonoBehaviour
         }
         else
         {
-            if (playButton != null) currentMenuButtons.Add(playButton);
-            if (optionButton != null) currentMenuButtons.Add(optionButton);
-            if (exitButton != null) currentMenuButtons.Add(exitButton);
+            foreach (Button b in new[] { playButton, optionButton, exitButton })
+                if (b != null && b.gameObject.activeSelf) currentMenuButtons.Add(b);
         }
     }
 
@@ -319,16 +367,9 @@ public class ArcadeMenuController : MonoBehaviour
             SelectButtonByIndex(currentSelectedIndex, playAudio: true);
         }
 
-        // แก้ไข: ปุ่มหน้า-หลัง ใช้สำหรับ Double-Tap ยืนยัน
-        if (Input.GetKeyDown(upKey))
-        {
-            CheckDoubleTap(upKey);
-        }
-
-        if (Input.GetKeyDown(downKey))
-        {
-            CheckDoubleTap(downKey);
-        }
+        // เหยียบขึ้นครั้งเดียว = ยืนยัน / เหยียบลง = เลื่อนไปปุ่มถัดไป (เหมือนทุกหน้าในเกม)
+        if (Input.GetKeyDown(upKey)) ConfirmIfReady();
+        if (Input.GetKeyDown(downKey) && !IsOptionPanelOpen) SelectNext();
     }
 
     void HandleKeyboardInput()
@@ -348,16 +389,8 @@ public class ArcadeMenuController : MonoBehaviour
             SelectButtonByIndex(currentSelectedIndex, playAudio: true);
         }
 
-        // แก้ไข: คีย์บอร์ดหน้า-หลัง ใช้สำหรับ Double-Tap ยืนยัน
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            // เช็ค Double-Tap บนคีย์บอร์ด โดยใช้ UpArrow เป็นคีย์ตัวแทน
-            CheckDoubleTap(KeyCode.UpArrow);
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            CheckDoubleTap(KeyCode.DownArrow);
-        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) ConfirmIfReady();
+        else if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && !IsOptionPanelOpen) SelectNext();
 
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
@@ -365,22 +398,16 @@ public class ArcadeMenuController : MonoBehaviour
         }
     }
 
-    void CheckDoubleTap(KeyCode pressedKey)
+    void ConfirmIfReady()
     {
-        float timeSinceLastPress = Time.time - lastPressTime;
+        if (Time.timeSinceLevelLoad < confirmDelay) return;
+        TriggerCurrentSelectedButton();
+    }
 
-        if (pressedKey == lastPressedKey && timeSinceLastPress <= doubleTapTimeThreshold)
-        {
-            Debug.Log($"<color=green>[Confirm Success]</color> กดยืนยันสำเร็จด้วยปุ่ม: {pressedKey}");
-            TriggerCurrentSelectedButton();
-            lastPressedKey = KeyCode.None;
-            lastPressTime = -1f;
-        }
-        else
-        {
-            lastPressedKey = pressedKey;
-            lastPressTime = Time.time;
-        }
+    void SelectNext()
+    {
+        if (currentMenuButtons.Count == 0) return;
+        SelectButtonByIndex((currentSelectedIndex + 1) % currentMenuButtons.Count, playAudio: true);
     }
 
     void TriggerCurrentSelectedButton()

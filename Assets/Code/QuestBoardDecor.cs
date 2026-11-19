@@ -25,7 +25,8 @@ public class QuestBoardDecor : MonoBehaviour
 
     [Header("Bottom Bar")]
     [SerializeField] private float barHeight = 30f;
-    [SerializeField] private string controlsHint = "LEFT / RIGHT (A / D) : CHOOSE     STEP UP x2 (W) / ENTER / CLICK : START     HOLD 3s / ESC : BACK";
+    // เหยียบขึ้นครั้งเดียว = เริ่ม / เหยียบลงค้าง 2 วินาที = กลับหน้าแรก
+    private const string ControlsHint = "LEFT / RIGHT : CHOOSE          STEP UP (W / ENTER) : START          HOLD DOWN 2s (ESC) : BACK";
 
     [Header("Ambience")]
     [Tooltip("ตำแหน่งแสงไฟ (พิกัดบน Canvas จากกึ่งกลาง) x, y = ตำแหน่ง, z = ขนาด")]
@@ -202,7 +203,7 @@ public class QuestBoardDecor : MonoBehaviour
         qn.pivot = new Vector2(0f, 0.5f);
 
         TextMeshProUGUI hint = NewText("ControlsHint", br, 8f, new Color(1f, 0.93f, 0.78f, 0.92f), TextAlignmentOptions.MidlineRight, FontStyles.Bold);
-        hint.text = controlsHint;
+        hint.text = ControlsHint;
         hint.enableAutoSizing = true;
         hint.fontSizeMin = 4f;
         hint.fontSizeMax = 8f;
@@ -223,7 +224,7 @@ public class QuestBoardDecor : MonoBehaviour
         holdFill.rectTransform.anchorMin = Vector2.zero; holdFill.rectTransform.anchorMax = Vector2.one;
         holdFill.rectTransform.offsetMin = new Vector2(1f, 1f); holdFill.rectTransform.offsetMax = new Vector2(-1f, -1f);
         holdLabel = NewText("HoldLabel", canvasRect, 7f, new Color(1f, 0.93f, 0.78f), TextAlignmentOptions.BottomRight, FontStyles.Bold);
-        holdLabel.text = "HOLD TO GO BACK...";
+        holdLabel.text = "KEEP HOLDING DOWN TO GO BACK...";
         RectTransform hl = holdLabel.rectTransform;
         hl.anchorMin = hl.anchorMax = new Vector2(1f, 0f);
         hl.pivot = new Vector2(1f, 0f);

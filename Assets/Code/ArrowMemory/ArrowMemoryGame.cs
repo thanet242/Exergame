@@ -24,19 +24,23 @@ public class ArrowMemoryGame : MonoBehaviour
     {
         public string label, labelEn, hint;
         public float seconds;
-        public int startLength, add, points;
+        public int startLength, add, points, lives = 3;
         public float show, gap; // วินาที
     }
 
+    // "สบาย ๆ" สำหรับเด็กเล็ก/ผู้สูงอายุ: ช้า ลำดับสั้น หัวใจ 5 ดวง เวลานานขึ้น
     private static readonly Difficulty[] Difficulties =
     {
+        new Difficulty { label = "สบาย ๆ", labelEn = "RELAXED", hint = "ช้า หัวใจ 5 ดวง", seconds = 100, startLength = 2, add = 1, show = 1.0f, gap = 0.45f, points = 80, lives = 5 },
         new Difficulty { label = "ง่าย", labelEn = "EASY", hint = "จังหวะสบาย", seconds = 75, startLength = 2, add = 1, show = 0.72f, gap = 0.36f, points = 100 },
         new Difficulty { label = "ปกติ", labelEn = "NORMAL", hint = "ท้าทายกำลังดี", seconds = 65, startLength = 3, add = 1, show = 0.50f, gap = 0.21f, points = 150 },
         new Difficulty { label = "ยาก", labelEn = "HARD", hint = "เร็วและยาวกว่า", seconds = 55, startLength = 4, add = 2, show = 0.31f, gap = 0.115f, points = 220 },
     };
 
     private const int StartLives = 3, RoundsPerHeart = 3;
-    private const float BonusSeconds = 30f, KcalPerStep = 0.04f;
+    private const float BonusSeconds = 30f;
+    // แคลอรี่: สูตร METs เดียวกับทุกเกม (เหยียบตามจังหวะ สลับกับยืนดู ประมาณ 4.0 METs)
+    private const float ExerciseMETs = 4.0f;
 
     [Header("Scene")]
     [Tooltip("ฉากที่กลับไปเมื่อออกจากเกม (ปุ่ม \"หน้าเลือกเกม\")")]
@@ -170,6 +174,9 @@ public class ArrowMemoryGame : MonoBehaviour
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.V)) CycleVoice(1);
+
+        // การ์ดสอนเล่นของงานแสดงเปิดทับอยู่ (หรือเพิ่งปิดในเฟรมนี้): ไม่รับปุ่ม
+        if (ExhibitMode.InputBlocked) return;
 
         Dir? pressed = ReadDirection();
 
@@ -372,7 +379,8 @@ public class ArrowMemoryGame : MonoBehaviour
         phase = Phase.Starting;
         sequence.Clear();
         inputIndex = score = round = steps = 0;
-        lives = maxLives = StartLives;
+        lives = maxLives = Settings.lives;
+        finishedPlaySeconds = 0f;
         bonusTime = 0f;
         startedAt = Time.time;
         startVoicePlayed = false;
@@ -545,6 +553,7 @@ public class ArrowMemoryGame : MonoBehaviour
     private void Finish()
     {
         if (!running) return;
+        finishedPlaySeconds = PlayedSeconds;
         running = false;
         StopFlow();
         voiceSource.Stop();
@@ -680,7 +689,7 @@ public class ArrowMemoryGame : MonoBehaviour
         scoreText.text = score.ToString("N0");
         roundText.text = round.ToString();
         stepsText.text = steps.ToString();
-        caloriesText.text = $"{steps * KcalPerStep:0.00} kcal โดยประมาณ";
+        caloriesText.text = $"{Calories:0.00} kcal โดยประมาณ";
         maxLives = Mathf.Max(maxLives, lives);
         if (hearts.Count != maxLives) RebuildHearts();
         for (int i = 0; i < hearts.Count; i++)
@@ -699,8 +708,14 @@ public class ArrowMemoryGame : MonoBehaviour
         if (countingDown) { timeText.text = Mathf.CeilToInt(Settings.seconds).ToString(); return; }
         float left = SecondsLeft;
         timeText.text = Mathf.Max(0, Mathf.CeilToInt(left)).ToString();
+        caloriesText.text = $"{Calories:0.00} kcal โดยประมาณ";
         if (left <= 0f) Finish();
     }
+
+    // เวลาเล่นจริง (หลังนับถอยหลัง ไม่นับช่วงหยุดเกม) และแคลอรี่จากสูตร METs กลาง
+    private float PlayedSeconds => running && !countingDown ? Mathf.Max(0f, Time.time - startedAt) : finishedPlaySeconds;
+    private float finishedPlaySeconds;
+    private float Calories => ResultHelpers.CaloriesFromMets(ExerciseMETs, PlayedSeconds);
 
     private void RenderSeq(string mode, int index = 0, int wrongAt = -1)
     {
@@ -952,7 +967,7 @@ public class ArrowMemoryGame : MonoBehaviour
         {
             int idx = i;
             Image tile = NewPanel("Difficulty", modal, Hex(0x10203d), Hex(0x48648f), 14);
-            Place(tile.rectTransform, (i - 1) * 250, -370, 230, 96);
+            Place(tile.rectTransform, (i - 1.5f) * 192, -370, 180, 96);
             Text t = NewText("Label", tile.rectTransform, $"{Difficulties[i].label}\n<size=18><color=#9DB1C8>{Difficulties[i].hint}</color></size>", 32, Ink, TextAnchor.MiddleCenter, FontStyle.Bold);
             Stretch(t.rectTransform);
             AddClick(tile.gameObject, () => SelectDifficulty(idx));
@@ -972,7 +987,7 @@ public class ArrowMemoryGame : MonoBehaviour
         AddFocusButton(start, StartGame);
         focusIndex = 1;
 
-        Text hint = NewText("PadHint", modal, "ลง (S) = เลื่อนแถว     ซ้าย/ขวา (A/D) = เปลี่ยนค่าในแถว     ขึ้น (W) หรือ Enter = กดปุ่มที่สว่าง\nระหว่างเล่น: เหยียบลงค้างไว้ = หยุดเกม     คลิกเมาส์ได้", 19, Muted, TextAnchor.MiddleCenter);
+        Text hint = NewText("PadHint", modal, "ลง = เลื่อนแถว     ซ้าย/ขวา = เปลี่ยนค่า     ขึ้น = กดปุ่มที่สว่าง\nระหว่างเล่น: เหยียบลงค้างไว้ = หยุดเกม", 25, Muted, TextAnchor.MiddleCenter);
         Place(hint.rectTransform, 0, -700, 800, 60);
 
         OpenOverlay();
@@ -1033,7 +1048,7 @@ public class ArrowMemoryGame : MonoBehaviour
         AddFocusButton(resume, ResumeGame);
         focusIndex = 2;
 
-        Text hint = NewText("PadHint", modal, "ลง = เลื่อนแถว     ซ้าย/ขวา = เปลี่ยนค่าในแถว     ขึ้น หรือ Enter = กดปุ่มที่สว่าง     Esc = เล่นต่อ", 19, Muted, TextAnchor.MiddleCenter);
+        Text hint = NewText("PadHint", modal, "ลง = เลื่อนแถว     ซ้าย/ขวา = เปลี่ยนค่า     ขึ้น = กดปุ่มที่สว่าง", 25, Muted, TextAnchor.MiddleCenter);
         Place(hint.rectTransform, 0, -450, 800, 40);
 
         OpenOverlay();
@@ -1055,13 +1070,25 @@ public class ArrowMemoryGame : MonoBehaviour
         ClearModal();
         difficultyTiles.Clear();
         ClearMenuRows();
-        modal.sizeDelta = new Vector2(860, 640);
+        modal.sizeDelta = new Vector2(860, 760);
 
         int passed = Mathf.Max(0, round - 1);
         string titleText = round >= 8 ? "MEMORY MASTER" : round >= 4 ? "GREAT RHYTHM" : "NICE START";
-        float played = Mathf.Max(0f, Time.time - startedAt);
+        float played = finishedPlaySeconds;
+        float kcal = Calories;
         Text title = NewText("Title", modal, titleText, 70, Cyan, TextAnchor.MiddleCenter, FontStyle.Bold);
         Place(title.rectTransform, 0, -40, 820, 100);
+
+        // ดาว: ผ่าน 3 รอบ = 2 ดาว / ผ่าน 6 รอบ = 3 ดาว + อันดับวันนี้ + แคลอรี่เทียบกับการเดิน
+        int stars = passed >= 6 ? 3 : passed >= 3 ? 2 : 1;
+        for (int i = 0; i < 3; i++)
+        {
+            Image s = NewImage("Star", modal, ExhibitUI.StarSprite, i < stars ? Gold : new Color(1f, 1f, 1f, 0.18f));
+            Place(s.rectTransform, (i - 1) * 64, -112, 58, 58);
+        }
+        var (rank, count) = DailyLeaderboard.Submit(DailyLeaderboard.ArrowMemory, score);
+        Text info = NewText("Info", modal, $"{DailyLeaderboard.RankText(rank, count)}\n<size=22>{ResultHelpers.KcalCompare(kcal)}</size>", 26, Ink, TextAnchor.MiddleCenter);
+        Place(info.rectTransform, 0, -175, 820, 70);
 
         // สรุปผลและการเคลื่อนไหวทั้งหมดของรอบนี้
         string[,] stats =
@@ -1069,7 +1096,7 @@ public class ArrowMemoryGame : MonoBehaviour
             { "ผ่าน", $"{passed} รอบ" },
             { "คะแนน", score.ToString("N0") },
             { "เหยียบ", $"{steps} ครั้ง" },
-            { "พลังงาน", $"{steps * KcalPerStep:0.00} kcal" },
+            { "พลังงาน", $"{kcal:0.00} kcal" },
             { "เวลา", $"{Mathf.FloorToInt(played / 60f):00}:{Mathf.FloorToInt(played % 60f):00}" },
             { "ระดับ", Settings.label },
         };
@@ -1077,30 +1104,30 @@ public class ArrowMemoryGame : MonoBehaviour
         {
             int col = i % 3, row = i / 3;
             Image card = NewPanel("Stat", modal, Hex(0x122343), Hex(0x47648e), 14);
-            Place(card.rectTransform, (col - 1) * 260, -175 - row * 120, 240, 104);
+            Place(card.rectTransform, (col - 1) * 260, -280 - row * 120, 240, 104);
             Text v = NewText("Value", card.rectTransform, stats[i, 1], 34, Ink, TextAnchor.MiddleCenter, FontStyle.Bold);
             Place(v.rectTransform, 0, -14, 230, 50);
-            Text k = NewText("Key", card.rectTransform, stats[i, 0], 20, Muted, TextAnchor.MiddleCenter);
+            Text k = NewText("Key", card.rectTransform, stats[i, 0], 22, Muted, TextAnchor.MiddleCenter);
             Place(k.rectTransform, 0, -62, 230, 30);
         }
 
-        BuildArrowLine(modal, -415);
+        BuildArrowLine(modal, -510);
 
         // ปุ่ม 3 ปุ่ม เลื่อนเลือกด้วยซ้าย/ขวา (แผ่นเหยียบ / A D / ลูกศร / ชี้เมาส์) แล้วกดยืนยัน
         focusButtons.Clear(); focusActions.Clear();
         Image choose = NewButton(modal, "เลือกระดับความยาก", false, ShowHome);
-        Place(choose.rectTransform, -275, -500, 250, 64);
+        Place(choose.rectTransform, -275, -600, 250, 64);
         AddFocusButton(choose, ShowHome);
         Image again = NewButton(modal, "เล่นอีกรอบ", true, StartGame);
-        Place(again.rectTransform, 0, -500, 250, 64);
+        Place(again.rectTransform, 0, -600, 250, 64);
         AddFocusButton(again, StartGame);
         Image questBoard = NewButton(modal, "หน้าเลือกเกม", false, ExitGame);
-        Place(questBoard.rectTransform, 275, -500, 250, 64);
+        Place(questBoard.rectTransform, 275, -600, 250, 64);
         AddFocusButton(questBoard, ExitGame);
         focusIndex = 1; // เริ่มที่ "เล่นอีกรอบ"
 
-        Text hint = NewText("PadHint", modal, "ซ้าย/ขวา (A/D) = เลือกปุ่ม     ขึ้น (W) หรือ Enter = ยืนยัน     Esc = หน้าเลือกเกม     คลิกเมาส์ได้", 20, Muted, TextAnchor.MiddleCenter);
-        Place(hint.rectTransform, 0, -585, 840, 40);
+        Text hint = NewText("PadHint", modal, "ซ้าย/ขวา = เลือกปุ่ม     ขึ้น หรือ Enter = ยืนยัน", 26, Muted, TextAnchor.MiddleCenter);
+        Place(hint.rectTransform, 0, -690, 840, 44);
 
         OpenOverlay();
     }

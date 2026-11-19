@@ -89,8 +89,17 @@ namespace CookieRun
             }
         }
 
-        /// <summary>ตัวคูณความเร็ววิ่งจากความยาก (1 = ปกติ) ไม่เพิ่มระหว่างช่วงสอนเล่น</summary>
-        public float SpeedMultiplier => isTutorialActive ? 1f : Mathf.Min(maxSpeedMultiplier, 1f + distanceTraveled * speedRampPerMeter);
+        /// <summary>
+        /// ตัวคูณความเร็ววิ่งจากความยาก (1 = ปกติ) ไม่เพิ่มระหว่างช่วงสอนเล่น
+        /// ระดับ "สบาย ๆ": วิ่งความเร็วเริ่มต้นตลอด (ไม่ลดต่ำกว่า 1 เพราะระยะกระโดดออกแบบไว้ที่ความเร็วนี้)
+        /// </summary>
+        public float SpeedMultiplier => isTutorialActive || ExhibitMode.Relaxed ? 1f : Mathf.Min(maxSpeedMultiplier, 1f + distanceTraveled * speedRampPerMeter);
+
+        // เวลาวิ่งจริงหลังจบช่วงสอนเล่น (ใช้จำกัดเวลาต่อรอบในงานแสดง)
+        private float runSeconds;
+
+        /// <summary>งานแสดง: เวลาที่เหลือของรอบนี้ (วินาที) / -1 = ไม่จำกัด</summary>
+        public float ExhibitTimeLeft => ExhibitMode.On ? Mathf.Max(0f, ExhibitMode.RunnerTimeLimit - runSeconds) : -1f;
 
         /// <summary>ระดับความยากปัจจุบัน (เริ่มที่ 1)</summary>
         public int CurrentLevel => currentLevel;
@@ -185,6 +194,14 @@ namespace CookieRun
             playTimeSeconds += Time.deltaTime;
 
             if (isTutorialActive) return;
+
+            // งานแสดง: จำกัดเวลาต่อรอบ ให้คิวเดินเร็ว (หมดเวลา = สรุปผล)
+            runSeconds += Time.deltaTime;
+            if (ExhibitMode.On && runSeconds >= ExhibitMode.RunnerTimeLimit)
+            {
+                TriggerGameOver();
+                return;
+            }
 
             // คำนวณระยะทางที่วิ่งได้
             if (playerTransform != null)

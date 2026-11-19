@@ -415,8 +415,13 @@ namespace CookieRun
             if (gm == null) yield break;
 
             bool newBest = gm.CurrentScore > 0 && gm.CurrentScore >= gm.HighScore;
+            int meters = Mathf.FloorToInt(gm.DistanceTraveled);
+            var (rank, count) = DailyLeaderboard.Submit(DailyLeaderboard.Runner, meters);
             var data = new ResultPopupUI.Data
             {
+                // ดาวตามระยะทาง: ถึงด่านหินกลิ้ง (150 ม.) = 2 ดาว / ถึงด่านกับดักหนาม (450 ม.) = 3 ดาว
+                stars = meters >= 450 ? 3 : meters >= 150 ? 2 : 1,
+                rankLine = DailyLeaderboard.RankText(rank, count),
                 seconds = gm.PlayTimeSeconds,
                 // ช่องกลางของโหมดวิ่งแสดงระยะทางที่วิ่งได้ (ภาพหัวข้อ "Distance")
                 middleValue = $"{Mathf.FloorToInt(gm.DistanceTraveled)}<size=55%> m</size>",

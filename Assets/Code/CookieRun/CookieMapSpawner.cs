@@ -377,7 +377,8 @@ namespace CookieRun
                 }
             }
 
-            float pitWeight = 1f + pitWeightPerLevel * (level - 1);
+            // ระดับ "สบาย ๆ": หลุมเพิ่มขึ้นช้ากว่าปกติมาก
+            float pitWeight = 1f + pitWeightPerLevel * (ExhibitMode.Relaxed ? 0.25f : 1f) * (level - 1);
             float total = 0f;
             foreach (GameObject c in spawnCandidates) total += ChunkWeight(c, pitWeight);
             bool generated = groundTemplate != null && level >= generatedUnlockLevel;

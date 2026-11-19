@@ -162,6 +162,7 @@ public class TutorialManager : MonoBehaviour
     private void Update()
     {
         if (!isWaitingForAction || isFading || currentStepIndex >= tutorialSteps.Count) return;
+        if (ExhibitMode.InputBlocked) return;
 
         TutorialTriggerType targetAction = tutorialSteps[currentStepIndex].triggerToDismiss;
 
@@ -195,7 +196,8 @@ public class TutorialManager : MonoBehaviour
                 {
                     if (Input.GetKeyDown(key))
                     {
-                        if (key == lastTappedKey && (Time.time - lastTapTime) <= 0.4f)
+                        float window = playerController != null ? playerController.DoubleTapWindow : 0.4f;
+                        if (key == lastTappedKey && (Time.time - lastTapTime) <= window)
                         {
                             lastTapTime = -1f;
                             lastTappedKey = KeyCode.None;
