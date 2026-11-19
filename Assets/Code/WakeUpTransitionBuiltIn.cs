@@ -53,18 +53,20 @@ public class WakeUpTransitionBuiltIn : MonoBehaviour
 
     IEnumerator WakeUpSequence()
     {
+        // ใช้เวลาจริง (unscaled): การ์ดสอนเล่นของงานแสดงหยุดเวลาเกม (timeScale = 0) ตอนเข้าฉาก
+        // ถ้าใช้เวลาเกม ฉากลืมตาจะค้างเป็นจอขาว-เทาทับทุกอย่าง
         float screenH = Screen.height / 2f + 50f;
 
         // เริ่มต้น: หลับตาสนิท
         SetEyelidHeight(screenH);
         flashOverlay.color = new Color(1, 1, 1, 0.7f); // แสงขาวจำลองความสว่างจ้าตอนเริ่ม
 
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSecondsRealtime(0.6f);
 
         // แง้มตาครั้งที่ 1 (เปิด 30% แล้วหลับลง)
         yield return MoveEyes(screenH * 0.7f, 0.35f);
         yield return MoveEyes(screenH, 0.25f);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSecondsRealtime(0.2f);
 
         // ลืมตาขึ้นทั้งหมด
         StartCoroutine(MoveEyes(0f, 1.2f));
@@ -74,7 +76,7 @@ public class WakeUpTransitionBuiltIn : MonoBehaviour
         float duration = 1.2f;
         while (elapsed < duration)
         {
-            elapsed += Time.deltaTime;
+            elapsed += Time.unscaledDeltaTime;
             float alpha = Mathf.Lerp(0.7f, 0f, elapsed / duration);
             flashOverlay.color = new Color(1, 1, 1, alpha);
             yield return null;
@@ -89,7 +91,7 @@ public class WakeUpTransitionBuiltIn : MonoBehaviour
 
         while (time < duration)
         {
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             float h = Mathf.Lerp(startHeight, targetHeight, time / duration);
             SetEyelidHeight(h);
             yield return null;

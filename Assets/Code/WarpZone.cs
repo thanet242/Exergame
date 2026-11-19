@@ -17,6 +17,14 @@ public class WarpZone : MonoBehaviour
 
     private Collider2D warpCollider;
 
+    // Cave1 เป็นฉากทางผ่าน (วาร์ปเปิดอยู่แล้ว เดินตามลูกศรอย่างเดียว) จบฝึกสอนแล้วไปด่านจริง Cave3 เลย
+    // ไฟล์ฉาก Cave1 ยังอยู่ ถ้าต้องการกลับมาใช้ ลบบรรทัด Cave1 ออกจากตารางนี้
+    private static readonly System.Collections.Generic.Dictionary<string, string> SkippedScenes =
+        new System.Collections.Generic.Dictionary<string, string> { { "Cave1", "Cave3" } };
+
+    public static string ResolveTarget(string scene) =>
+        scene != null && SkippedScenes.TryGetValue(scene, out string next) ? next : scene;
+
     void Awake()
     {
         warpCollider = GetComponent<Collider2D>();
@@ -62,6 +70,7 @@ public class WarpZone : MonoBehaviour
         if (collision.CompareTag("Player") || collision.GetComponentInParent<PlayerController>() != null)
         {
             Time.timeScale = 1f;
+            string targetSceneName = ResolveTarget(this.targetSceneName);
 
             if (!string.IsNullOrEmpty(targetSceneName))
             {

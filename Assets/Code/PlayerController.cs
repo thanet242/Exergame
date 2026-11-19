@@ -1174,7 +1174,8 @@ public class PlayerController : MonoBehaviour
         if (isDead) return;
 
         // ระดับ "สบาย ๆ" (เลือกที่การ์ดสอนเล่น): โดนกับดัก/มอนสเตอร์เสียเลือดครึ่งเดียว
-        if (ExhibitMode.Relaxed) amount *= 0.5f;
+        // (ค่าติดลบ = ฟื้นเลือด เช่น ด่านฝึกสอนรีเซ็ตเลือดเต็ม ไม่ต้องลดครึ่ง)
+        if (ExhibitMode.Relaxed && amount > 0f) amount *= 0.5f;
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
         UpdateHealthBarUI();

@@ -81,6 +81,32 @@ public class TutorialManager : MonoBehaviour
     private float holdTimer = 0f;
     private bool isTutorialCompleted = false;
 
+    // ---------- คำบรรยายภาษาไทย + เสียงพูด (ผู้เล่นทุกวัยในงานแสดง) ----------
+    // ข้อความบนหัวตัวละครเป็นภาษาอังกฤษ (ฟอนต์ TMP ไม่มีภาษาไทย) จึงมีแถบภาษาไทยตัวใหญ่ด้านล่างจอคู่กัน
+    // เรียงตามลำดับขั้นใน Inspector: เดิน / ขุด / ตัวเลข / ปักธง / เป้าหมายด่านจริง
+    private static readonly string[] ThaiSteps =
+    {
+        "เหยียบแผ่นลูกศร ทิศไหนก็ได้ เพื่อเดิน",
+        "เหยียบทิศเดิมซ้ำ 2 ครั้ง เพื่อขุดหินที่อยู่ข้างหน้า",
+        "ตัวเลข = จำนวนระเบิดใน 8 ช่องรอบ ๆ ช่องนั้น",
+        "เหยียบค้างไว้ เพื่อปักธงบนช่องที่คิดว่ามีระเบิด",
+        "ด่านจริง: เคลียร์ระเบิดและมอนสเตอร์ให้หมด ประตูทางออกจึงจะเปิด",
+    };
+    // ข้อความบนหัวตัวละคร: เขียนแบบแผ่นเหยียบ (ข้อความเดิมใน Scene พูดถึงแต่คีย์บอร์ด)
+    private static readonly string[] PadSteps =
+    {
+        "Step on any arrow pad to move.",
+        "Step the same pad twice to dig the rock in front.",
+        "Numbers show how many bombs are in the 8 tiles around.",
+        "Hold a pad to plant a flag on a suspected bomb.",
+        "Clear all bombs and monsters to open the exit!",
+    };
+    private const string ThaiDone = "ฝึกเสร็จแล้ว! เดินตามลูกศรไปที่ทางออก เพื่อเริ่มด่านจริง";
+    private UnityEngine.UI.Text thaiText;
+    private CanvasGroup thaiGroup;
+    private AudioSource voice;
+    private float doneBannerUntil = -1f;
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -124,14 +150,52 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
+        BuildThaiBanner();
         if (tutorialSteps.Count > 0)
         {
             StartCoroutine(ShowStepRoutine(0));
         }
     }
 
+    // แถบคำบรรยายภาษาไทยตัวใหญ่ด้านล่างจอ (อยู่เหนือแผ่นเหยียบเล็กมุมขวาล่าง)
+    private void BuildThaiBanner()
+    {
+        RectTransform canvas = ExhibitUI.NewCanvas("TutorialThaiBanner", 400);
+        canvas.GetComponent<UnityEngine.UI.GraphicRaycaster>().enabled = false;
+        UnityEngine.UI.Image bg = ExhibitUI.NewPanel("Bg", canvas, new Color(0.1f, 0.07f, 0.05f, 0.9f), ExhibitUI.Line);
+        RectTransform br = bg.rectTransform;
+        br.anchorMin = br.anchorMax = new Vector2(0.5f, 0f);
+        br.pivot = new Vector2(0.5f, 0f);
+        br.anchoredPosition = new Vector2(0f, 40f);
+        br.sizeDelta = new Vector2(1500f, 120f);
+        thaiText = ExhibitUI.NewText("Text", bg.transform, "", 48, ExhibitUI.Ink);
+        ExhibitUI.Stretch(thaiText.rectTransform);
+        thaiGroup = canvas.gameObject.AddComponent<CanvasGroup>();
+        thaiGroup.alpha = 0f;
+
+        voice = gameObject.AddComponent<AudioSource>();
+        voice.playOnAwake = false;
+    }
+
+    private void PlayStepVoice(string clipName)
+    {
+        if (voice == null) return;
+        AudioClip clip = Resources.Load<AudioClip>("Exhibit/" + clipName);
+        if (clip == null) return;
+        voice.Stop();
+        voice.clip = clip;
+        voice.Play();
+    }
+
     private void LateUpdate()
     {
+        // แถบภาษาไทยจางเข้า-ออกพร้อมข้อความบนหัว / ตอนจบโชว์ "ฝึกเสร็จแล้ว" ค้างไว้ครู่หนึ่ง
+        if (thaiGroup != null && canvasGroup != null)
+        {
+            bool done = doneBannerUntil > 0f && Time.time < doneBannerUntil;
+            thaiGroup.alpha = done ? 1f : (isTutorialCompleted ? Mathf.MoveTowards(thaiGroup.alpha, 0f, Time.deltaTime * 2f) : canvasGroup.alpha);
+        }
+
         if (tutorialText == null || playerController == null) return;
 
         if (mainCam == null)
@@ -296,7 +360,9 @@ public class TutorialManager : MonoBehaviour
         if (index >= tutorialSteps.Count) yield break;
 
         currentStepIndex = index;
-        tutorialText.text = tutorialSteps[currentStepIndex].message;
+        bool known = tutorialSteps.Count == ThaiSteps.Length;
+        tutorialText.text = known ? PadSteps[index] : tutorialSteps[currentStepIndex].message;
+        if (thaiText != null) thaiText.text = known ? ThaiSteps[index] : "";
         holdTimer = 0f;
 
         if (currentStepIndex == 2 && playerController != null)
@@ -318,6 +384,7 @@ public class TutorialManager : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 1f;
+        if (known) PlayStepVoice("CaveTut_" + index);
 
         isWaitingForAction = true;
 
@@ -378,6 +445,13 @@ public class TutorialManager : MonoBehaviour
     {
         if (isTutorialCompleted) return;
         isTutorialCompleted = true;
+
+        if (thaiText != null)
+        {
+            thaiText.text = ThaiDone;
+            doneBannerUntil = Time.time + 6f;
+            PlayStepVoice("CaveTut_Done");
+        }
 
         // สั่งปลดล็อกจุดวาร์ปและเปิดลูกศรนำทาง
         if (stageWarpZone != null)
