@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f94d297e9e147c8811b9de70d5e54e3, type: 3}
+  m_Name: UIArtLibrary
+  m_EditorClassIdentifier:
+  gameOverSprite: {fileID: 21300000, guid: 31028d23f833d0544a96cffffbafdb97, type: 3}
+  stageClearSprite: {fileID: 21300000, guid: 6ce83243a52696b488e7af8b088a6d13, type: 3}
+  stageClearNextSprite: {fileID: 21300000, guid: fe8d213040f746bbbdadf5da5af61af7, type: 3}
+  gameOverDistanceSprite: {fileID: 21300000, guid: c482586d028340c0a938c307d6cf418e, type: 3}
+  resultDistanceSprite: {fileID: 21300000, guid: 91faa7b241a043718286735b6d51c133, type: 3}
+  plaqueSprite: {fileID: 21300000, guid: 6f7cded31c93495bb8bedf36a03d80a8, type: 3}
+  selectSound: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
+  confirmSound: {fileID: 8300000, guid: 0c008ee3ee72a4362a35be25fa5de043, type: 3}

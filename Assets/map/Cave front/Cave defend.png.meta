@@ -1,0 +1,8122 @@
+fileFormatVersion: 2
+guid: 1d00b7dd774b88045ae74490e472229d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 60
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cave defend_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a0ec06f2a78124c9fa786dd1f30550
+      internalID: -151612090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d4efb97576e2444b8d3f17fcfa153c
+      internalID: -1774861952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9757cfe317737b469f678a0b6344dc4
+      internalID: 1626675983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50ff25ed5e1b534c9294ec59a139c4e
+      internalID: 986404775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0e61899648be04fab6b7eda1b512b9
+      internalID: -1786990486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9457e50e8ca1544bf3ee0ec99223e6
+      internalID: -650973408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cfe593c31672d42a4733f70abf4715
+      internalID: 1491742392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0cf00357c365a34abecfe4450613608
+      internalID: -710258204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88f41d6436a9ed4e83c301b12257dc2
+      internalID: 273543249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa7001ced99b204489765d5050bc875
+      internalID: -688733819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4d4486686a584438027d2e76846189
+      internalID: 222599515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3a7894b6baa0e41a5ba5642470f89e
+      internalID: -1155505894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a396a2e1016b40e47b29bc8c22382c53
+      internalID: 2118677195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0fde34db7be5c4c8f5095e668d02a3
+      internalID: -207502994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_14
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a298e05b80a89429e6b77f43077c31
+      internalID: 872802156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_15
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc477afa3a170e45a93eeb70b869a18
+      internalID: 1289709359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_16
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1be066e88bbc4439e3057d7dda6991
+      internalID: 1912062330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_17
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7258bbdf98b9544a6f3612c199905e
+      internalID: 1452682881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_18
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc1247a0a29fcf45bcf1151efb940fb
+      internalID: -1883857869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_19
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3395de946ea79db42ae14d54578dbfc9
+      internalID: -1981064858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9884476111878d74aa0050e19cec6615
+      internalID: -254023825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_21
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c813cc73a8c674d8ac824021349ce3
+      internalID: -1705332701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_22
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0066b836cf546b4ab9eb80a8f26b005
+      internalID: 17649038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_23
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b2c59ed2d6f304baec72a9aabb2dd9
+      internalID: 680980596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_24
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3d9e83ae7d4b54da1098e021a31985
+      internalID: 1326247198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_25
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 863
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1bf4f2364b5e84d8024ec432e838b4
+      internalID: 1431815916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42efaa3821bb5747b57762a8bc7283f
+      internalID: -1040048791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c2d28863758e34e96c48d41d0cd9c4
+      internalID: -1952071419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea19dcd12f10424b9a010f65b1d1ef3
+      internalID: 2113797060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9339364266b00b845839e4a42a899a22
+      internalID: -145540328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a0f564da3bb4e49a430371ecc15d8a
+      internalID: -1379234600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_31
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bac37d9d78d3542b8cbb4155846e31
+      internalID: 552412655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50e17e7b0866c3b4db475ba27c0761b6
+      internalID: 670947447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76cf7f0882aa6540829d3a9ee6d4b1d
+      internalID: 1599071396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef514bc5bf3fdb948a75a0b2a171bb2e
+      internalID: 557665415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_35
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb20824105184e14bae9aed3bdaaf88d
+      internalID: 1868685543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89537e1ea390b6147a18030fd59c12c5
+      internalID: -1757662012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_37
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2b9ad89a6fa214dab78640a94103b0
+      internalID: -52576389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_38
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3c6771ba3e67e4b931e08999b3ab3d
+      internalID: 1594515856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_39
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50781c0b5aae9f419afbfacc9c985ee
+      internalID: -1391754412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_40
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096ec45bde0683044b9fc6f67e904759
+      internalID: -1957101906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_41
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1668f7655c79d6844afcfa2e14c7b3b7
+      internalID: -1136380803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_42
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebac478ef6f83a418363c1ea7705f88
+      internalID: 493852794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_43
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb283f0c1873e6468ee271969074fbf
+      internalID: 134526839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_44
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df88718491ae5554baab1c72c422fa23
+      internalID: -1581249245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_45
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a82242fb73be44dbd4540e10c77ccd
+      internalID: -288493487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_46
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f1add35b0695a4a8b131bb93b093e6
+      internalID: 17862929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_47
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19cf0b098a296243b8548812af2eb45
+      internalID: -102842978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_48
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3f570f222a7544087f60f0fc5b1f8d
+      internalID: 1492973268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_49
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3081db3d99f66a849aa3e5137b41ac34
+      internalID: -1362382220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_50
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 963baea33fdf6714794b960eaf72893d
+      internalID: -22369697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_51
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 799
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4433b7d714c04e64882ff8cc457a2c66
+      internalID: 1280683441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412382ff1c3b61949aafe7e8f38cd945
+      internalID: -1244910793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803400a226439324e987bc960ff20c2e
+      internalID: -830276964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4027bcb4f5385344a508ff0747e7fc0
+      internalID: -943632645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce74a8fc12b028b488173edb6e9c2501
+      internalID: 956313115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3e6d0d0ba85224bb269573c824cfe4
+      internalID: -1223959064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1268e3b21ab494396cf85e9161a085
+      internalID: -502021660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c2556849ad8774e8a4394da1ae546d
+      internalID: -136336546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e2af44a64d3d140bed059d1f66ec71
+      internalID: 925797776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_60
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98aa16f4b4fe78b44afbabf6fd0fa47b
+      internalID: -1147606203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_61
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f7dab49828ee64ea810297d64affd3
+      internalID: -1355928328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_62
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37b3c4f995ec0204a9996a4c78b393f5
+      internalID: 1887607483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_63
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71c36d0297dd5343957fdc6dc1a6a6c
+      internalID: 741080774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_64
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f941c676448be4f42bc02e577073300c
+      internalID: 2057259138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_65
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad5665d8078f004fa34055cf82cedee
+      internalID: -1792379020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_66
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b24fd672acaf494393e2d9530a5b29e
+      internalID: 886119664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_67
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f78c30454aede54b9f6882102d8c258
+      internalID: -1106540247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea80e42a210dec46bfb58412c09aaf0
+      internalID: 1172716306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_69
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902043c8af19fee43b038a3e7160689c
+      internalID: -1819929817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_70
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac2c07282696954fa08ea702b193acc
+      internalID: -1601299444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_71
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4098553513d054497970c108d4aa14
+      internalID: 1083588012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_72
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c99eaf64a5a5fb48ae6a8ea3804b57a
+      internalID: -905744292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_73
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdb4e9b5f2319342904d04e7424f073
+      internalID: 728098601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_74
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e949724dd7a9414e8524b1862f09016
+      internalID: -1156293184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_75
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b79d76ffa30034bbb823a7fb6aa9f5
+      internalID: 959988689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_76
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b51175b41cd353429865d86c2ced9a1
+      internalID: 1064202447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_77
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 735
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967e6e7240b5c6947a31eae9da9df903
+      internalID: -1434290977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5023c2a241a694e8e31aa7d88717dd
+      internalID: 540977422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_79
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ad86795dfbf7c49a5f69d8b2bfc5d1
+      internalID: 2107195228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_80
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fa59e90d9624e468e522945ed38748
+      internalID: -1108697132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_81
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0fee5ba5f787845856db6376b1a2b4
+      internalID: 328517017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_82
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecd360ab1f4fdc43ad9715003a80eb7
+      internalID: -1321232590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_83
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b9c075a5e4c8a40a32112d77353b5e
+      internalID: 942272138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_84
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879ee19cdbec7b14e8f7827f965f888c
+      internalID: 1878668874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_85
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700961e2bce04de4cb67b840ee05b0f6
+      internalID: -886662766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_86
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d72d13447b458043a54d0de5386d90e
+      internalID: -1970878911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_87
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e02545769cc0e4b8cf3cea3ea35a25
+      internalID: -1320617826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_88
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21234a39c21984c49a2eaecb1de18402
+      internalID: -530109142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_89
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a0baab23b58ac4b9792b99ead7590d
+      internalID: -1300811718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_90
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9927c0f3600a3b4f9c72542acef8a74
+      internalID: -1109197655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_91
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eabe9e9dba28794589c0ecff40f6091
+      internalID: 793922628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_92
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd29e572d504cba4b9eedab33602f6cd
+      internalID: -1932544726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_93
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bb467ca32d17a44bc3afea8e3b88cc
+      internalID: 1810743377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_94
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c528e07c8e0c08c418980dd5d9fbbe46
+      internalID: -1650627476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_95
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60068382648cea9478a67f0f41587b91
+      internalID: -1702646601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_96
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7380c95153f01847b86bd01adbe875b
+      internalID: 1058332535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_97
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba6c9bd017033d4484f4b21b9368198
+      internalID: -1614182944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_98
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc7691f9ad6157f46b74bac18ba0af65
+      internalID: 1089321237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_99
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4eeee17b6f0474a80d10ea3a3026e2
+      internalID: 1411998036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_100
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c243dac3ea5a0774d84c002f8a61b5d5
+      internalID: 1771257747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_101
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95273a9316b1b54fab529cbd6102377
+      internalID: 1072786455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_102
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9713d3c31daa04691c87ad9690f3f3
+      internalID: -1994828470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_103
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 671
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 670801364da823648ae283ac113a8ff6
+      internalID: -1869316589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb19c18f5e3e89c43964e1d7f79be8cb
+      internalID: 1506638235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_105
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4df25250f8f66d4abf780fb3f115ec6
+      internalID: -474178432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_106
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6825702088a833c47b4ee28587c40b09
+      internalID: 920755997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_107
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a910383b691942b9c62a561cbe855
+      internalID: 1889542970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_108
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8c2853501aa4f49821a9ca286611d8
+      internalID: 1474779915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_109
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176ab610735af504dbdaf3f0b3916092
+      internalID: -1231832440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_110
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fdf1a8136f6ce46a4084af6c88db2d
+      internalID: 1077691939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_111
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9083779bcb81e488ca5f9a26e06a57
+      internalID: -962561461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_112
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a40b84db07766e4db515542e438e9ae
+      internalID: -979312355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_113
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2984d3dd05e28fd498f24774c2911926
+      internalID: 593248659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_114
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2946c8855bd668e42ad507e784f8967c
+      internalID: -469737611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_115
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de79fa3ce2cadee4191f71f3fd81c671
+      internalID: 1552202173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_116
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b4c84e89c7f80489a1cd22b79fc400
+      internalID: -595005392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_117
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e51ef3739aa27149a576fc7932151be
+      internalID: -244372407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_118
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae935e8412374b419ea6a19373ef696
+      internalID: -180121790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_119
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc0c33cda5d1ea4c8ddb147eef8c2fb
+      internalID: 39724098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_120
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1eb8ccbd80f47548b68b23b12d267b3
+      internalID: 1216270477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_121
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d057aeffe5574d46a72ece7c0363842
+      internalID: -98449883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_122
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc72bc7ef00177d46b1b3047788620e6
+      internalID: -2138821878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_123
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0226a9cf6f82de40a95567a2ad1db88
+      internalID: 636164905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_124
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b76ba4b99b7c44fb62c7f780bb44b3
+      internalID: 993791656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_125
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc18a0a42cb8b64f87378eae9f86a5a
+      internalID: -1161638870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_126
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21fbf84459784541967a8c12df6e571
+      internalID: 366558295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_127
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d59fb2427186954da5e0a7531297c2e
+      internalID: -67346051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_128
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5896721eb4b0cf3458b4d320b339072a
+      internalID: -2058574368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_129
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 607
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8318d23e62f062240981e15ad0925694
+      internalID: 535463667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24437351f0a56b643986a138452173c5
+      internalID: 336508686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_131
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad43c014ab985364182b4dac8e73f939
+      internalID: -86034147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_132
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8a6ad968f954e4e8c31cc6d7e920d7
+      internalID: 976997179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_133
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d2b64e6e159e34bb689177ca64e1ac
+      internalID: -593967519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_134
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32fcc321378a94b47becb75fa07bbf1c
+      internalID: 185439101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_135
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65180f1709508249b731347ea914e3b
+      internalID: 1341706643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_136
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5debe11ba19d74093b386af4f62715
+      internalID: 1276400503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_137
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9330f720393c34a8b6b9ea25919d9d
+      internalID: -375909060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_138
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dcd192a612f97499e3c7b1f3145da2
+      internalID: 27027161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_139
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b1d28f7c9058047b1006a096379130
+      internalID: 553765589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_140
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ab5c1dafcab8143b66dad9f1672c33
+      internalID: -1824920319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_141
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c725dc73501847249961d3671cea28c6
+      internalID: -1642486147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_142
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2a42b21783b484da56c40d282ef23f
+      internalID: -729162540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_143
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7dfe3292a1eb74480a47904535042b
+      internalID: 1963329252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_144
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de01b85fa932bd041826ec2f2d0729b1
+      internalID: -1518429012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_145
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782cbc0379a86194abf080504ef1d344
+      internalID: -887583414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_146
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b87ecb2fd079ac499b591c59e3df5c0
+      internalID: -1418508374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_147
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd88cec9bb6578459662d50b2562a92
+      internalID: -858347418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_148
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3074b80dee2708458668202ac097d2f
+      internalID: 1485156994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_149
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5f4d3b06a513249824767eeec4fd70
+      internalID: 396348571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_150
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82eb8b77b6c14fa44bbac7192ab7d8f0
+      internalID: 15686325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_151
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c1b1aa978220f4f9d1f7d61dc96a98
+      internalID: 563465847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_152
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fefaa7d7de94a44183f545d1a7ed1b7
+      internalID: -655148884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_153
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffb8580658988dd4b818005d6322bf55
+      internalID: -1505014073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_154
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c498914788ebd4438534d25f728826d
+      internalID: -175994742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_155
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 543
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab8287911c66d34aac4195dd562f474
+      internalID: -1158082929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_156
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216a7329d4e686c428c538260271db0b
+      internalID: -665698427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_157
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c508fecf1d2f447915b007e68c2fca
+      internalID: 869062756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_158
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e996adc244cc5b4db770db485de5035
+      internalID: 817188995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_159
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf174f78175bcb4db71e5855e1051fe
+      internalID: -930206823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_160
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23ee828e08ee0048a75789c4dc6e075
+      internalID: 1821675600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_161
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ad7e671f6a44c43bdc560f4544dd4b
+      internalID: -2029825075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_162
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd93ae264e232c42b6dde92ecb5cad6
+      internalID: -1667995349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_163
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8f23e2d845f1d40bc873fce1ee96ff
+      internalID: 698589736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_164
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1484616379f2ab644a21c7bd89a2ec32
+      internalID: -2141832922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_165
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92ec9010bfbda541ba99fb76c0be2e4
+      internalID: -24929143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_166
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54b1b8429a22c54eb1d669b755231d3
+      internalID: -1419278865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_167
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7285becb6d04bc9429951e3ab2c372fd
+      internalID: 1766446260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_168
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d801b20b26119474a963208df78a8385
+      internalID: -1617334610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_169
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd93d1bad9bc5584e9cbb3f1528a8ca9
+      internalID: 2095856103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_170
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa7f1ee0514f49418bf58455e1a53b9
+      internalID: 1891472485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_171
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77dd934119a2fbe428fa1e5289836373
+      internalID: 1737241096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_172
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72f91ebed1fedb449348faa48ffe415
+      internalID: 1260065287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_173
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54463a3610399054eb05cc0e1f9a8f1b
+      internalID: 1436765015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_174
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d090b131cc76c4a9b38bf73aad94fe
+      internalID: 1688669573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_175
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7837fee9b6b2a745bf146e7b96c7cae
+      internalID: -1586688694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_176
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bef0b2ea0ec60640bf450c7ba7fe6f6
+      internalID: -1113365585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_177
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e235c4cd5406c2b498c5ad7a06a7e1ed
+      internalID: -945355130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_178
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9d649b9ed5ba044be5cf81c94bd0d0
+      internalID: 1257321310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_179
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86252be913ab214594d35e2846848e6
+      internalID: -377893399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_180
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43adac21f6704e04984bc2433b132efe
+      internalID: -84165059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_181
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 479
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6d55269bd18e645a6c13cf8cfa28c2
+      internalID: 1320524627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_182
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de08ed490cec2e42b8ca2538c429574
+      internalID: 294071435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_183
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0be1ed62fcdb043869026ded9f20b4
+      internalID: 90834732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_184
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd6ee635bd36e94580cb3a8bd9cb165
+      internalID: 301461184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_185
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09125b7fe108edd4ab8e4915725076a6
+      internalID: 1853605115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_186
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97240f4fe4475164c9196a7cafaf74d4
+      internalID: -656680403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_187
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae6a30ab1df1af48807831438040517
+      internalID: -1552425283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_188
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8328ae95292af2419a57f06b58f3769
+      internalID: 592000232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_189
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8568742fe370ab048a820c8fc8cad911
+      internalID: 2018495330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_190
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2e2f275d0759e429441e6a86549d09
+      internalID: -1785622189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_191
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabaa386a730b4645a131577a5a6f2a0
+      internalID: 533982307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_192
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77e3901ca628df489908c2ed4030609
+      internalID: -1748129810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_193
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0902d89dab016bc41a37049eb325bb95
+      internalID: 1840455644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_194
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7dd67333275b1c4892bab1c61a06b17
+      internalID: 1314073908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_195
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e7b1eee78ffde4dbc907c517d0e108
+      internalID: 2146290258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_196
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68505b24919fb6b4ebfa08636c0ce3f6
+      internalID: -697355369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_197
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9479896fdff874a4494e6a078ddb174e
+      internalID: -1597577900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_198
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfe95a3033ecf04299aec2860f76826
+      internalID: -74822601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_199
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6fda279ef64e6e4f9a59c56185c4c4e
+      internalID: -1046748561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_200
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b9e39661ef0064383dea584148ffb0
+      internalID: 1633816089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_201
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d195e0884e52b74994484b73865dffd
+      internalID: -1213830349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_202
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b524cf53e288c248af5ad14b49df9bb
+      internalID: 1783189912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_203
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b9bf25f68ba034daf148937463ba89
+      internalID: -369626785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_204
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b2e3765ace0a7d42b3c32a8915ba3a0
+      internalID: 554522593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_205
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91c7854539fd11419468ca2581dc343
+      internalID: -1678160660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_206
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c140e3c7bbcc240abc3b0516df960d
+      internalID: -1673874809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_207
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 415
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bd8f476c6d51444910f0b9a0214b98
+      internalID: -1844803337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_208
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a19c71d71bc1a4c931fae01ea1d172
+      internalID: -2021061088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_209
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b3939ce2509ef4d8b0c3eace9f2dc4
+      internalID: 636673214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_210
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d918812f8f8d9c4fa0fd5a716fdb5f2
+      internalID: 852374765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_211
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35248b26a442810449ca4b62d9f720d0
+      internalID: 1251305588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_212
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998e3e25f1b323042b693eecd068d3a8
+      internalID: -566715731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_213
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bfe6781bb8ffc4ea6b29bdb591cafb
+      internalID: -839651678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_214
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed06eade6444cc42a12f3aa4ffe580d
+      internalID: -1381564636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_215
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefc6337ed743c844abc088e9db7bd56
+      internalID: 499178693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_216
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21265c36e32b607499ff5c031205c4a0
+      internalID: -880653288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_217
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccc03055dcb86b4cb3a71bea4733623
+      internalID: 140600806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_218
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86556e6010564ba41a1d0c5bea9c0806
+      internalID: 2068317994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_219
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a967e87c9c3e5247b30e1fbbf073c77
+      internalID: -1845665735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_220
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8e09f75b322994685b9834709202fb
+      internalID: -70129300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_221
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae89b3127112ce54388ebfa82887bc84
+      internalID: 64588360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_222
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab714b447705c047b57d8ad07f09f8a
+      internalID: 1358986012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_223
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060c00cb199f5f640ab8e4dd7c15670e
+      internalID: -1511646274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_224
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52062461ec6b5364f90a50eb33c31370
+      internalID: 871566591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_225
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53dd80cea8c0eac4db1d0a0ef5e437fd
+      internalID: -1440915195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_226
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b0beeea3396fe4f997a4dbdd40a222
+      internalID: 686780848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_227
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4276675312e79364e8bb10c6f61cfee0
+      internalID: 549962140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_228
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9132cccf99d5343ba9b96601ab01e2
+      internalID: -442102306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_229
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aeed652ab593a4891c1437bc8a0604
+      internalID: -1195778447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_230
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdbaf3bc3b0c1046b0d287b4754c08b
+      internalID: 1080488477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_231
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5e695cc482985449500a2b7a48d0ae
+      internalID: -439074510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_232
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36c51f8973ac1d41a122eed8669e723
+      internalID: 198426430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_233
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 351
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7223af36854a5db4cb6c3ce80ee8edb2
+      internalID: 385519071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_234
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e20462dc58f46448dba1b52b3d9685
+      internalID: -119714256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_235
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0870519a6022d804ead05728a6c0739d
+      internalID: -1635131510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_236
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a64a989247b0c340a23a90020309a49
+      internalID: -640943472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_237
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2753b0eb7c0e5bd4cb65c71082aaad80
+      internalID: 1472092217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_238
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e135c26b2d940c499440dc06cec2dfa
+      internalID: -1917599763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_239
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a745a375e18b6349a41e76143947328
+      internalID: -1868175398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_240
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afafc8af23954449888a91f57c00ef0
+      internalID: -681465855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_241
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2300b432de5b84c90ce1d6123fbe68
+      internalID: -459701358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_242
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a867d93bb5d72f34a9c65f7f66c02aee
+      internalID: -1297563147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_243
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c846b3c170fcc694e81d01c78df441d0
+      internalID: -2145630139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_244
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259a2273ce8ae7a4f8126e0ad725f8eb
+      internalID: -1390011280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_245
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b98c71acd7d3544aec7590c15a0036
+      internalID: -219782557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_246
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0afd8b204ae5054abcfcfac61a39515
+      internalID: 2012080520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_247
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6368f40551066054a93dc3c6f5e21e35
+      internalID: -26478610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_248
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27cf812e8a3f3644bd5cd8c7e627ada
+      internalID: -338070981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_249
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53581546a296b045948df9f789c7fda
+      internalID: 1232276535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_250
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a8899e7669d8545a586db7e5ccca79
+      internalID: -823270290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_251
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5032d76faeb9d834ba30904b8ced2e24
+      internalID: -1282766596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_252
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd21461359400745b1f6eeb81918ea2
+      internalID: -11126821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_253
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d45f9f90a7b61546981902047c48aaa
+      internalID: 1976809073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_254
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d0e0aa4879d744f82cd51cdae8a74b
+      internalID: -1911183850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_255
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88a6aea4c2650248b133ce79c750cc8
+      internalID: 1363516852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_256
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4770a071001a64db53744700e7d41d
+      internalID: -1827670575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_257
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1be986977e32a4eaa4b824ad558c73
+      internalID: 1340459589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_258
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0af38a3df08a24b8a2dfc6fd5f08aa
+      internalID: -776586089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_259
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 287
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3b3458f2ff26b44844334ff9b23bf5
+      internalID: -257470570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_260
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7047242b94b272419f0ecd115116872
+      internalID: 1144480229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_261
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9428f74faae070841adc48df955f3de8
+      internalID: -1267692845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_262
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 153ee848d2d0b7c41a0273f9906a8bfe
+      internalID: 242088084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_263
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97bdb623189dd5849a6ffbdff45d5a59
+      internalID: -1833001834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_264
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b34bb50317e7746b6d8ed407335204
+      internalID: -1339759811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_265
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b9283a2df5a2244da4e950960997aff
+      internalID: -77209393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_266
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c44b10d333ff2f4e93d7b226f7f6033
+      internalID: 2061563878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_267
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1fa05d73a2f4243a6d8d5ef09424e2
+      internalID: -157697886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_268
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b16a9c48074954bad8bd02a55ac004
+      internalID: 1071190663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_269
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d90aaf54c513714d9dd7f0fd945fc22
+      internalID: -1777119109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_270
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd46e065716ddf458c6e2e2b2b8cf73
+      internalID: 203286475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_271
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328fa2911499ba3409a2673518663952
+      internalID: 387053767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_272
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d8db83b0cb32d499bbfdee596d5f96
+      internalID: 1570581263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_273
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be9aefbd46152b4fa73c32a48d87e88
+      internalID: -1023110397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_274
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a9828d99fc7ec418ddec733bc8bbe7
+      internalID: -1007532186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_275
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afc3db068202ab4cb97b2c3e92690b4
+      internalID: -1159828102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_276
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a053612ed84c4439e23adda4c32a5f
+      internalID: -1293048458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_277
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d085edc17141a8b4382f6a589d8e9f9d
+      internalID: 1702889784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_278
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f0c0d1102578643ace4f4e7f2c5595
+      internalID: 1525038414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_279
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b531b56311b9d4e9d5d4d31b38ddb8
+      internalID: -883184715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_280
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f97ee8f51e0d2469336fd5397c6a67
+      internalID: 1266683990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_281
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a776b63d3e1644cae711f5bbdaced4
+      internalID: -241138791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_282
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126effd44dd6d274fb027dacf64930ad
+      internalID: -666566467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_283
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632fdd02cce105f48a561df288ffd3d4
+      internalID: 209411698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_284
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc83263df38eb44f8d75d3f13a387a8
+      internalID: -1458381127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_285
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 223
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725d98bcf1fca7545a1b7d8519c09a47
+      internalID: -1401713940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_286
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a262ac10688f45c4ba6c35e2fe679d83
+      internalID: -1227253604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_287
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5b1f01793c9d1428544fcbf7e53a6a
+      internalID: 1521333063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_288
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738f6b0f468244e4480cd9c34781eff5
+      internalID: 931826895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_289
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c994f4fa4d243d740a19cd9c65176ca0
+      internalID: 1938851918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_290
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af2c0fa26a5b4c4581ef079923398e6
+      internalID: 2057945430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_291
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909896e22f4c8454cacb2c2189ffc4bd
+      internalID: -186944749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_292
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7117edd78b68f54fa650e87f5568f37
+      internalID: -793161793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_293
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f117cfd2e9d93449d4ee0427f9b082
+      internalID: 727825470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_294
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71206a7dd48b914db957d3513ad5999
+      internalID: 616876139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_295
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bf976ab7239314eadfdf9849a34001
+      internalID: 1397737855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_296
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196241a45f8e6934ea9dc271db699408
+      internalID: 746677459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_297
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 925321623ad34a04e84af2b36b045225
+      internalID: 1124123334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_298
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26546546abc11046a089dc54b260aa6
+      internalID: 1436518442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_299
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267d2c7cb86754645bf2c6ff96065554
+      internalID: 2031369857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_300
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4aebf216adc7e44fb31d570fd1a2e6b
+      internalID: 1574086717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_301
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3cd8894762aac47838c9f76e24a448
+      internalID: 1118803772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_302
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99b9cb01be0a67c419cfbdffe661c3ef
+      internalID: -329168523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_303
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6942dd56ecb6cba4d9e72c6618c7f082
+      internalID: -1747098840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_304
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4946b05429a8f248bd0b9f25aea07ae
+      internalID: 2063094095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_305
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79a293482fbd2247963cb90fd2101b3
+      internalID: -156884653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_306
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaec715f82c73d4fb7c65fb6e013ae2
+      internalID: 1582655332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_307
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecded798855fba3478a7344f1ad8c671
+      internalID: 1361288124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_308
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7b95887ae24ec40a3d5113cb405077
+      internalID: 1013685305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_309
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43ce324ddd2f134f9bd5b0e6640ce97
+      internalID: -1869198237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_310
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adf6199791fc2946939efafcebddd4d
+      internalID: -666602128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_311
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 159
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9323ba75e037a44800c48e1555ea70
+      internalID: -1885915123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_312
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b90b37e6c8a91942b8a8697c0e2ec86
+      internalID: 1811774313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_313
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4857c9044e89074cb2d979513d09756
+      internalID: -1036410629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_314
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096c80f70f6b17542ab3d50d6aa6a2b0
+      internalID: -651923652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_315
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9fb2ed020322a44830cc1dbb4d037e
+      internalID: -1325363748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_316
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b67c682672d129429c12607e03e90f8
+      internalID: 1285374460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_317
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c96c3ce2c2eb34aa8fb0fb8104a9c1
+      internalID: -481487272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_318
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f2a9bd0c591644da6578e668146c78
+      internalID: -573368949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_319
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57825185b83847446ae0c8bcc1a959b3
+      internalID: -1804959720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_320
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2aa5d2372e39084f8dc815340694f5b
+      internalID: -506337010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_321
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dd0281efdd819b4cbc12e63788bac5a
+      internalID: 865424896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_322
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dcf4cf15490f9429dde66aeba97bb1
+      internalID: -454662810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_323
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f85f4c9afb723f4ba414e42b9ce217f
+      internalID: 579314795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_324
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4860b71e48ba64d834006cea6ecfda
+      internalID: -1762390460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_325
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bdb5c231e105e14a830c2e70da76446
+      internalID: 1083351263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_326
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28839d37140c6c41949464d4e206243
+      internalID: 1493494600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_327
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f3d9d7c7db99594bbe0161ba18fcb32
+      internalID: -54603609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_328
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3734fd5ba2b9d8c469abed2af3463d29
+      internalID: -1325759556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_329
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1cfa451d96f6541baa1e340919512e
+      internalID: 1599221296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_330
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee6990bd44e9614b8d3c53fd84a7382
+      internalID: 1162390479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_331
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a689eafecf75f804da6f790afb2e3a31
+      internalID: -522735216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_332
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e18e16de01a8b40b8f79bda673d211
+      internalID: -1693455870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_333
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e07c99c7fdead4887deb97922b240f
+      internalID: -331217075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_334
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bc52aae7adc41e459e424935c68d38f
+      internalID: 1338034773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_335
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e6d354f11e4ce49b7d9c0244cf52a9
+      internalID: 1588442722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_336
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe0d5cc9c7e1134a96abb97fcfe8d60
+      internalID: -69350062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_337
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 95
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ce01f5bbc8abd4fb74181718da5a57
+      internalID: -1146459579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_338
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5840c3f86d797b74b83f94491b8321cb
+      internalID: -1161471855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_339
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad6718bbb430b14fb900927f022a1ab
+      internalID: -761993474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_340
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7c72facfe324eb448eb88c77291a3dc
+      internalID: -1199559953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_341
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d63dfe8b41a7c4ba8321e843079f89
+      internalID: -1203000838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_342
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63a504722589b0f4c8501cdda92c3562
+      internalID: 1586583082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_343
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e7b3ec2e2c3ad43b0f4f6c466e214c
+      internalID: 1044324938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_344
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b06b5c450e7564482bf11428d148d7
+      internalID: -585149447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_345
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a8b49e0f0cb104d80731891f25e73e
+      internalID: 15683557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_346
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85e59dbcee5db64c8105198cd6866f8
+      internalID: -1753100530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_347
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43b64b99f9c2774ab0fce56550dc0d7
+      internalID: 911134945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_348
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb1d52a2e2b2a9479927191474382a1
+      internalID: 2044337584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_349
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dec9eb4c3e6a574192ceb2c351ca182
+      internalID: 1985910239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_350
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e86cf21fbffbb459771679cb314d7d
+      internalID: 2080202831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_351
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e2c2592d820854c84cabc2a62622c5
+      internalID: 1797893080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_352
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f009b5a79a7342a4a92c307c43fd1712
+      internalID: -1353986772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_353
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870f2cffe5803654ab92f8ace8e8e043
+      internalID: 1455938858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_354
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c11665273507c444927a209a07f7ceb
+      internalID: -1410379352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_355
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b828225d4e17c40a3ef421cdc91d35
+      internalID: -2015438285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_356
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931cb934343e1824fb382fd29db15ad0
+      internalID: 1196218180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_357
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3128a6e1a199440981daa7ee12b7c2
+      internalID: -791570305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_358
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a3ce504146d79a4aafc6e5a981fe316
+      internalID: -113626470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_359
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f763148e23af64fbf1bc0a521ae1cd
+      internalID: -1098824798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_360
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e43c601a149c44aa8e9ed9c470f519
+      internalID: -512724286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_361
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0c3f71bde836b4aa20e0abc65b70c0
+      internalID: 1349849065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_362
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9397cdead72b54891af6b9a911c264
+      internalID: -1752137469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave defend_363
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 31
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2bdb83b77afab40b02d0ad06447ce0
+      internalID: 1607685291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cave defend_0: -151612090
+      Cave defend_1: -1774861952
+      Cave defend_10: 222599515
+      Cave defend_100: 1771257747
+      Cave defend_101: 1072786455
+      Cave defend_102: -1994828470
+      Cave defend_103: -1869316589
+      Cave defend_104: 1506638235
+      Cave defend_105: -474178432
+      Cave defend_106: 920755997
+      Cave defend_107: 1889542970
+      Cave defend_108: 1474779915
+      Cave defend_109: -1231832440
+      Cave defend_11: -1155505894
+      Cave defend_110: 1077691939
+      Cave defend_111: -962561461
+      Cave defend_112: -979312355
+      Cave defend_113: 593248659
+      Cave defend_114: -469737611
+      Cave defend_115: 1552202173
+      Cave defend_116: -595005392
+      Cave defend_117: -244372407
+      Cave defend_118: -180121790
+      Cave defend_119: 39724098
+      Cave defend_12: 2118677195
+      Cave defend_120: 1216270477
+      Cave defend_121: -98449883
+      Cave defend_122: -2138821878
+      Cave defend_123: 636164905
+      Cave defend_124: 993791656
+      Cave defend_125: -1161638870
+      Cave defend_126: 366558295
+      Cave defend_127: -67346051
+      Cave defend_128: -2058574368
+      Cave defend_129: 535463667
+      Cave defend_13: -207502994
+      Cave defend_130: 336508686
+      Cave defend_131: -86034147
+      Cave defend_132: 976997179
+      Cave defend_133: -593967519
+      Cave defend_134: 185439101
+      Cave defend_135: 1341706643
+      Cave defend_136: 1276400503
+      Cave defend_137: -375909060
+      Cave defend_138: 27027161
+      Cave defend_139: 553765589
+      Cave defend_14: 872802156
+      Cave defend_140: -1824920319
+      Cave defend_141: -1642486147
+      Cave defend_142: -729162540
+      Cave defend_143: 1963329252
+      Cave defend_144: -1518429012
+      Cave defend_145: -887583414
+      Cave defend_146: -1418508374
+      Cave defend_147: -858347418
+      Cave defend_148: 1485156994
+      Cave defend_149: 396348571
+      Cave defend_15: 1289709359
+      Cave defend_150: 15686325
+      Cave defend_151: 563465847
+      Cave defend_152: -655148884
+      Cave defend_153: -1505014073
+      Cave defend_154: -175994742
+      Cave defend_155: -1158082929
+      Cave defend_156: -665698427
+      Cave defend_157: 869062756
+      Cave defend_158: 817188995
+      Cave defend_159: -930206823
+      Cave defend_16: 1912062330
+      Cave defend_160: 1821675600
+      Cave defend_161: -2029825075
+      Cave defend_162: -1667995349
+      Cave defend_163: 698589736
+      Cave defend_164: -2141832922
+      Cave defend_165: -24929143
+      Cave defend_166: -1419278865
+      Cave defend_167: 1766446260
+      Cave defend_168: -1617334610
+      Cave defend_169: 2095856103
+      Cave defend_17: 1452682881
+      Cave defend_170: 1891472485
+      Cave defend_171: 1737241096
+      Cave defend_172: 1260065287
+      Cave defend_173: 1436765015
+      Cave defend_174: 1688669573
+      Cave defend_175: -1586688694
+      Cave defend_176: -1113365585
+      Cave defend_177: -945355130
+      Cave defend_178: 1257321310
+      Cave defend_179: -377893399
+      Cave defend_18: -1883857869
+      Cave defend_180: -84165059
+      Cave defend_181: 1320524627
+      Cave defend_182: 294071435
+      Cave defend_183: 90834732
+      Cave defend_184: 301461184
+      Cave defend_185: 1853605115
+      Cave defend_186: -656680403
+      Cave defend_187: -1552425283
+      Cave defend_188: 592000232
+      Cave defend_189: 2018495330
+      Cave defend_19: -1981064858
+      Cave defend_190: -1785622189
+      Cave defend_191: 533982307
+      Cave defend_192: -1748129810
+      Cave defend_193: 1840455644
+      Cave defend_194: 1314073908
+      Cave defend_195: 2146290258
+      Cave defend_196: -697355369
+      Cave defend_197: -1597577900
+      Cave defend_198: -74822601
+      Cave defend_199: -1046748561
+      Cave defend_2: 1626675983
+      Cave defend_20: -254023825
+      Cave defend_200: 1633816089
+      Cave defend_201: -1213830349
+      Cave defend_202: 1783189912
+      Cave defend_203: -369626785
+      Cave defend_204: 554522593
+      Cave defend_205: -1678160660
+      Cave defend_206: -1673874809
+      Cave defend_207: -1844803337
+      Cave defend_208: -2021061088
+      Cave defend_209: 636673214
+      Cave defend_21: -1705332701
+      Cave defend_210: 852374765
+      Cave defend_211: 1251305588
+      Cave defend_212: -566715731
+      Cave defend_213: -839651678
+      Cave defend_214: -1381564636
+      Cave defend_215: 499178693
+      Cave defend_216: -880653288
+      Cave defend_217: 140600806
+      Cave defend_218: 2068317994
+      Cave defend_219: -1845665735
+      Cave defend_22: 17649038
+      Cave defend_220: -70129300
+      Cave defend_221: 64588360
+      Cave defend_222: 1358986012
+      Cave defend_223: -1511646274
+      Cave defend_224: 871566591
+      Cave defend_225: -1440915195
+      Cave defend_226: 686780848
+      Cave defend_227: 549962140
+      Cave defend_228: -442102306
+      Cave defend_229: -1195778447
+      Cave defend_23: 680980596
+      Cave defend_230: 1080488477
+      Cave defend_231: -439074510
+      Cave defend_232: 198426430
+      Cave defend_233: 385519071
+      Cave defend_234: -119714256
+      Cave defend_235: -1635131510
+      Cave defend_236: -640943472
+      Cave defend_237: 1472092217
+      Cave defend_238: -1917599763
+      Cave defend_239: -1868175398
+      Cave defend_24: 1326247198
+      Cave defend_240: -681465855
+      Cave defend_241: -459701358
+      Cave defend_242: -1297563147
+      Cave defend_243: -2145630139
+      Cave defend_244: -1390011280
+      Cave defend_245: -219782557
+      Cave defend_246: 2012080520
+      Cave defend_247: -26478610
+      Cave defend_248: -338070981
+      Cave defend_249: 1232276535
+      Cave defend_25: 1431815916
+      Cave defend_250: -823270290
+      Cave defend_251: -1282766596
+      Cave defend_252: -11126821
+      Cave defend_253: 1976809073
+      Cave defend_254: -1911183850
+      Cave defend_255: 1363516852
+      Cave defend_256: -1827670575
+      Cave defend_257: 1340459589
+      Cave defend_258: -776586089
+      Cave defend_259: -257470570
+      Cave defend_26: -1040048791
+      Cave defend_260: 1144480229
+      Cave defend_261: -1267692845
+      Cave defend_262: 242088084
+      Cave defend_263: -1833001834
+      Cave defend_264: -1339759811
+      Cave defend_265: -77209393
+      Cave defend_266: 2061563878
+      Cave defend_267: -157697886
+      Cave defend_268: 1071190663
+      Cave defend_269: -1777119109
+      Cave defend_27: -1952071419
+      Cave defend_270: 203286475
+      Cave defend_271: 387053767
+      Cave defend_272: 1570581263
+      Cave defend_273: -1023110397
+      Cave defend_274: -1007532186
+      Cave defend_275: -1159828102
+      Cave defend_276: -1293048458
+      Cave defend_277: 1702889784
+      Cave defend_278: 1525038414
+      Cave defend_279: -883184715
+      Cave defend_28: 2113797060
+      Cave defend_280: 1266683990
+      Cave defend_281: -241138791
+      Cave defend_282: -666566467
+      Cave defend_283: 209411698
+      Cave defend_284: -1458381127
+      Cave defend_285: -1401713940
+      Cave defend_286: -1227253604
+      Cave defend_287: 1521333063
+      Cave defend_288: 931826895
+      Cave defend_289: 1938851918
+      Cave defend_29: -145540328
+      Cave defend_290: 2057945430
+      Cave defend_291: -186944749
+      Cave defend_292: -793161793
+      Cave defend_293: 727825470
+      Cave defend_294: 616876139
+      Cave defend_295: 1397737855
+      Cave defend_296: 746677459
+      Cave defend_297: 1124123334
+      Cave defend_298: 1436518442
+      Cave defend_299: 2031369857
+      Cave defend_3: 986404775
+      Cave defend_30: -1379234600
+      Cave defend_300: 1574086717
+      Cave defend_301: 1118803772
+      Cave defend_302: -329168523
+      Cave defend_303: -1747098840
+      Cave defend_304: 2063094095
+      Cave defend_305: -156884653
+      Cave defend_306: 1582655332
+      Cave defend_307: 1361288124
+      Cave defend_308: 1013685305
+      Cave defend_309: -1869198237
+      Cave defend_31: 552412655
+      Cave defend_310: -666602128
+      Cave defend_311: -1885915123
+      Cave defend_312: 1811774313
+      Cave defend_313: -1036410629
+      Cave defend_314: -651923652
+      Cave defend_315: -1325363748
+      Cave defend_316: 1285374460
+      Cave defend_317: -481487272
+      Cave defend_318: -573368949
+      Cave defend_319: -1804959720
+      Cave defend_32: 670947447
+      Cave defend_320: -506337010
+      Cave defend_321: 865424896
+      Cave defend_322: -454662810
+      Cave defend_323: 579314795
+      Cave defend_324: -1762390460
+      Cave defend_325: 1083351263
+      Cave defend_326: 1493494600
+      Cave defend_327: -54603609
+      Cave defend_328: -1325759556
+      Cave defend_329: 1599221296
+      Cave defend_33: 1599071396
+      Cave defend_330: 1162390479
+      Cave defend_331: -522735216
+      Cave defend_332: -1693455870
+      Cave defend_333: -331217075
+      Cave defend_334: 1338034773
+      Cave defend_335: 1588442722
+      Cave defend_336: -69350062
+      Cave defend_337: -1146459579
+      Cave defend_338: -1161471855
+      Cave defend_339: -761993474
+      Cave defend_34: 557665415
+      Cave defend_340: -1199559953
+      Cave defend_341: -1203000838
+      Cave defend_342: 1586583082
+      Cave defend_343: 1044324938
+      Cave defend_344: -585149447
+      Cave defend_345: 15683557
+      Cave defend_346: -1753100530
+      Cave defend_347: 911134945
+      Cave defend_348: 2044337584
+      Cave defend_349: 1985910239
+      Cave defend_35: 1868685543
+      Cave defend_350: 2080202831
+      Cave defend_351: 1797893080
+      Cave defend_352: -1353986772
+      Cave defend_353: 1455938858
+      Cave defend_354: -1410379352
+      Cave defend_355: -2015438285
+      Cave defend_356: 1196218180
+      Cave defend_357: -791570305
+      Cave defend_358: -113626470
+      Cave defend_359: -1098824798
+      Cave defend_36: -1757662012
+      Cave defend_360: -512724286
+      Cave defend_361: 1349849065
+      Cave defend_362: -1752137469
+      Cave defend_363: 1607685291
+      Cave defend_37: -52576389
+      Cave defend_38: 1594515856
+      Cave defend_39: -1391754412
+      Cave defend_4: -1786990486
+      Cave defend_40: -1957101906
+      Cave defend_41: -1136380803
+      Cave defend_42: 493852794
+      Cave defend_43: 134526839
+      Cave defend_44: -1581249245
+      Cave defend_45: -288493487
+      Cave defend_46: 17862929
+      Cave defend_47: -102842978
+      Cave defend_48: 1492973268
+      Cave defend_49: -1362382220
+      Cave defend_5: -650973408
+      Cave defend_50: -22369697
+      Cave defend_51: 1280683441
+      Cave defend_52: -1244910793
+      Cave defend_53: -830276964
+      Cave defend_54: -943632645
+      Cave defend_55: 956313115
+      Cave defend_56: -1223959064
+      Cave defend_57: -502021660
+      Cave defend_58: -136336546
+      Cave defend_59: 925797776
+      Cave defend_6: 1491742392
+      Cave defend_60: -1147606203
+      Cave defend_61: -1355928328
+      Cave defend_62: 1887607483
+      Cave defend_63: 741080774
+      Cave defend_64: 2057259138
+      Cave defend_65: -1792379020
+      Cave defend_66: 886119664
+      Cave defend_67: -1106540247
+      Cave defend_68: 1172716306
+      Cave defend_69: -1819929817
+      Cave defend_7: -710258204
+      Cave defend_70: -1601299444
+      Cave defend_71: 1083588012
+      Cave defend_72: -905744292
+      Cave defend_73: 728098601
+      Cave defend_74: -1156293184
+      Cave defend_75: 959988689
+      Cave defend_76: 1064202447
+      Cave defend_77: -1434290977
+      Cave defend_78: 540977422
+      Cave defend_79: 2107195228
+      Cave defend_8: 273543249
+      Cave defend_80: -1108697132
+      Cave defend_81: 328517017
+      Cave defend_82: -1321232590
+      Cave defend_83: 942272138
+      Cave defend_84: 1878668874
+      Cave defend_85: -886662766
+      Cave defend_86: -1970878911
+      Cave defend_87: -1320617826
+      Cave defend_88: -530109142
+      Cave defend_89: -1300811718
+      Cave defend_9: -688733819
+      Cave defend_90: -1109197655
+      Cave defend_91: 793922628
+      Cave defend_92: -1932544726
+      Cave defend_93: 1810743377
+      Cave defend_94: -1650627476
+      Cave defend_95: -1702646601
+      Cave defend_96: 1058332535
+      Cave defend_97: -1614182944
+      Cave defend_98: 1089321237
+      Cave defend_99: 1411998036
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

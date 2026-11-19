@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<title>คู่มือการเล่นเกม</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm; }
+  body { font-family: "Leelawadee UI", Tahoma, sans-serif; font-size: 11pt; line-height: 1.6; color: #23201c; }
+  h1 { font-size: 22pt; color: #8a4512; margin: 0 0 4px; }
+  h2 { font-size: 16pt; color: #ffffff; background: #8a4512; padding: 6px 12px; border-radius: 6px; margin: 26px 0 10px; page-break-after: avoid; }
+  h3 { font-size: 13pt; color: #2b4a7a; margin: 16px 0 6px; border-bottom: 2px solid #d9cbb8; padding-bottom: 2px; page-break-after: avoid; }
+  p { margin: 4px 0 8px; orphans: 3; widows: 3; }
+  ul, ol { margin: 4px 0 8px; padding-left: 24px; page-break-inside: avoid; break-inside: avoid; }
+  li { margin: 2px 0; }
+  table { border-collapse: collapse; width: 100%; margin: 6px 0 12px; font-size: 10pt; page-break-inside: avoid; break-inside: avoid; }
+  th, td { border: 1px solid #cfc4b4; padding: 5px 8px; vertical-align: top; text-align: left; }
+  th { background: #efe6da; }
+  tr { page-break-inside: avoid; }
+  figure { margin: 8px 0 14px; text-align: center; page-break-inside: avoid; }
+  figure img { max-width: 100%; border: 1px solid #cfc4b4; border-radius: 4px; }
+  figcaption { font-size: 9.5pt; color: #6c645b; margin-top: 3px; }
+  .shot { border: 2px dashed #c08a4a; background: #fff7ec; border-radius: 6px; padding: 18px 12px; text-align: center; color: #8a4512; margin: 8px 0 14px; page-break-inside: avoid; }
+  .shot b { display: block; font-size: 11pt; }
+  .tip { background: #eef5ff; border-left: 4px solid #2b6cc4; padding: 6px 10px; margin: 8px 0; border-radius: 0 6px 6px 0; }
+  .warn { background: #fff4dc; border-left: 4px solid #d99a1e; padding: 6px 10px; margin: 8px 0; border-radius: 0 6px 6px 0; }
+  .key { display: inline-block; border: 1px solid #a99a86; border-bottom-width: 3px; border-radius: 4px; padding: 0 6px; background: #faf6f0; font-weight: bold; font-size: 10pt; }
+  .pb { page-break-before: always; }
+  .keep { page-break-inside: avoid; break-inside: avoid; }
+  .sub { color: #6c645b; }
+</style>
+</head>
+<body>
+
+<h1>คู่มือการเล่นเกม</h1>
+<p class="sub">เกมออกกำลังกายด้วยแผ่นเหยียบ 4 ทิศ — มี 3 เกม: ถ้ำกู้ระเบิด, วิ่งผจญภัย (Cookie Runner), จำลูกศร (Arrow Memory)</p>
+
+<h2>1. อุปกรณ์และการควบคุม</h2>
+<p>ผู้เล่นยืนตรงกลางแผ่นเหยียบ แล้วก้าวเท้าไปเหยียบแผ่นทิศ บน / ล่าง / ซ้าย / ขวา เพื่อควบคุมเกม แผ่นเหยียบต่อกับคอมพิวเตอร์แบบจอยสติ๊ก ทุกหน้าในเกมใช้คีย์บอร์ดและเมาส์แทนได้ (เหมาะสำหรับทดสอบ)</p>
+<figure><img src="manual_images/m01_pad.png"><figcaption>ภาพที่ 1 ผังแผ่นเหยียบ 4 ทิศ และปุ่มคีย์บอร์ดที่ใช้แทนได้</figcaption></figure>
+<div class="tip">ในหน้า Option เปลี่ยนปุ่มได้ ทั้งปุ่มแผ่นเหยียบและปุ่มคีย์บอร์ด และตั้งระดับเสียงได้</div>
+
+<h2 class="pb">2. การเข้าเกม</h2>
+<h3>2.1 หน้าเมนูหลัก</h3>
+<table>
+<tr><th>การกระทำ</th><th>แผ่นเหยียบ</th><th>คีย์บอร์ด / เมาส์</th></tr>
+<tr><td>เลื่อนเลือกปุ่ม</td><td>เหยียบ ซ้าย / ขวา</td><td><span class="key">A</span> <span class="key">D</span> หรือชี้เมาส์</td></tr>
+<tr><td>ยืนยัน</td><td>เหยียบ บน 2 ครั้งติดกัน</td><td><span class="key">W</span> 2 ครั้ง, <span class="key">Enter</span> หรือคลิก</td></tr>
+</table>
+<ul>
+<li><b>PLAY</b> ไปหน้าเลือกเกม</li>
+<li><b>OPTION</b> ตั้งค่าเสียงและเปลี่ยนปุ่ม</li>
+<li><b>EXIT</b> ออกจากเกม</li>
+</ul>
+
+<h3>2.2 หน้าเลือกเกม (Quest Board)</h3>
+<table>
+<tr><th>การกระทำ</th><th>แผ่นเหยียบ</th><th>คีย์บอร์ด / เมาส์</th></tr>
+<tr><td>เลือกเกม</td><td>เหยียบ ซ้าย / ขวา</td><td><span class="key">A</span> <span class="key">D</span> หรือชี้เมาส์</td></tr>
+<tr><td>เริ่มเกม</td><td>เหยียบ บน 2 ครั้งติดกัน</td><td><span class="key">W</span> 2 ครั้ง, <span class="key">Enter</span> หรือคลิก</td></tr>
+<tr><td>กลับเมนูหลัก</td><td>เหยียบค้าง 3 วินาที</td><td><span class="key">Esc</span></td></tr>
+</table>
+
+<h2 class="pb">3. เกมที่ 1: ถ้ำกู้ระเบิด</h2>
+<p>ผู้เล่นเป็นนักสำรวจในถ้ำที่เต็มไปด้วยก้อนหิน ใต้หินบางก้อนมีระเบิดหรือมอนสเตอร์ซ่อนอยู่ ต้องขุดเปิดหินอย่างระวัง ใช้ตัวเลขบนช่องที่เปิดแล้วเดาว่ากับดักอยู่ตรงไหน แล้วปักธงทับไว้ (หลักการเดียวกับเกม Minesweeper) เมื่อเคลียร์ได้ครบ ประตูทางออกจะเปิด</p>
+<figure><img src="manual_images/m02_cave3_play.png"><figcaption>ภาพที่ 2 หน้าจอเล่นด่านถ้ำ (Cave3) ตัวละครอยู่กลางพื้นที่ที่ขุดเปิดแล้ว</figcaption></figure>
+<h3>3.1 ด่าน</h3>
+<table>
+<tr><th>ด่าน</th><th>รายละเอียด</th></tr>
+<tr><td>ด่านสอนเล่น (Tutorial)</td><td>สอนเดิน ขุด ปักธง ทีละขั้นด้วยข้อความเหนือหัวตัวละคร สอนครบแล้วลูกศรชี้ไปทางออก</td></tr>
+<tr><td>Cave 1, Cave 2</td><td>ด่านถ้ำปกติ มีระเบิดและมอนสเตอร์ซ่อนใต้หิน</td></tr>
+<tr><td>Cave 3</td><td>ด่านสุดท้าย มีทั้งระเบิดและมอนสเตอร์ไล่ล่า แสดงหลอดเลือดมอนสเตอร์ที่แถบด้านบน</td></tr>
+</table>
+
+<h3>3.2 การควบคุม</h3>
+<table>
+<tr><th>การกระทำ</th><th>วิธีเหยียบ</th><th>ผล</th></tr>
+<tr><td>เดิน</td><td>เหยียบทิศที่ต้องการ 1 ครั้ง</td><td>เดินไป 1 ช่อง และหันหน้าไปทางนั้น</td></tr>
+<tr><td>ขุด / โจมตี</td><td>เหยียบทิศเดียวกัน 2 ครั้งติดกันเร็วๆ (ภายใน 0.4 วินาที)</td><td>ขุดหินช่องข้างหน้า หรือตีมอนสเตอร์</td></tr>
+<tr><td>ปักธง / ถอนธง</td><td>เหยียบค้างไว้ประมาณ 0.5 วินาทีแล้วปล่อย</td><td>ปักธงบนหินช่องข้างหน้า (ทำซ้ำเพื่อถอน)</td></tr>
+<tr><td>สกิลขุดวงกว้าง</td><td>กด <span class="key">Q</span> บนคีย์บอร์ด (ปลดล็อกเมื่อปักธงถูกครบตามกำหนด)</td><td>ขุดเปิดหิน 3x3 ช่องข้างหน้า (ไม่ขุดช่องที่ปักธง)</td></tr>
+</table>
+<h3>3.3 สิ่งที่พบในด่าน</h3>
+<figure><img src="manual_images/m03_cave_elements.png"><figcaption>ภาพที่ 3 องค์ประกอบในด่านถ้ำ</figcaption></figure>
+<ul>
+<li><b>ตัวเลข</b> บอกว่าใน 8 ช่องรอบๆ มีกับดัก (ระเบิด + มอนสเตอร์) กี่ช่อง ถ้าช่องที่เปิดไม่มีกับดักรอบๆ เลย เกมจะเปิดช่องข้างเคียงต่อให้อัตโนมัติ</li>
+<li><b>ระเบิด</b> ถ้าขุดโดน เลือดลดครึ่งหนึ่ง แต่แรงระเบิดกำจัดมอนสเตอร์ที่อยู่ใกล้ได้ด้วย</li>
+<li><b>มอนสเตอร์</b> ขุดเจอแล้วจะโผล่ออกมา งงอยู่ 1 วินาที แล้วเดินไล่ผู้เล่นทีละช่อง ก่อนโจมตีจะง้าง (เปลี่ยนสี) ถ้าก้าวหนีทันจะไม่โดน ผู้เล่นตีมอนสเตอร์อัตโนมัติเมื่ออยู่ช่องติดกัน</li>
+<li><b>ธง</b> ปักบนช่องที่คิดว่ามีกับดัก ปักถูกจุดจึงนับเป็นการเคลียร์</li>
+</ul>
+<h3>3.4 เป้าหมายและการจบด่าน</h3>
+<ol>
+<li>เคลียร์กับดักให้ได้ตามจำนวนที่ด่านกำหนด โดย <b>ปักธงถูกจุด</b> หรือ <b>กำจัดมอนสเตอร์</b></li>
+<li>ประตูทางออกจะเปิดที่จุดเกิดตอนเริ่มด่าน เดินเข้าไปเพื่อจบด่าน</li>
+<li>หน้าสรุปผลแสดงเวลา จำนวนกับดักที่เคลียร์ แคลอรี่ และสถิติการเคลื่อนไหว (ก้าว / ขุด / ปักธง / โจมตี / มอนสเตอร์)</li>
+<li>เลือกได้ว่าจะไปด่านถัดไป เล่นซ้ำ หรือกลับเมนู</li>
+</ol>
+<p><b>แพ้เมื่อ</b> เลือดหมด (เริ่มที่ 100) จะขึ้นหน้าสรุปผลแบบ Game Over</p>
+<h2 class="pb">4. เกมที่ 2: วิ่งผจญภัย (Cookie Runner)</h2>
+<p>ตัวละครวิ่งไปข้างหน้าเองตลอดเวลา ผู้เล่นต้องกระโดดข้ามหลุมและสิ่งกีดขวาง หรือสไลด์ลอดสิ่งที่ห้อยจากเพดาน เก็บเหรียญและไอเทม และวิ่งให้ได้ไกลที่สุด ยิ่งวิ่งไกล ยิ่งเร็วขึ้นและฉากเปลี่ยนไปเรื่อยๆ</p>
+
+<h3>4.1 การควบคุม</h3>
+<table>
+<tr><th>การกระทำ</th><th>แผ่นเหยียบ</th><th>คีย์บอร์ด</th><th>หมายเหตุ</th></tr>
+<tr><td>กระโดด</td><td>เหยียบ บน</td><td><span class="key">Space</span> หรือ <span class="key">ลูกศรขึ้น</span></td><td>กลางอากาศเหยียบอีกครั้งได้ = กระโดด 2 ชั้น</td></tr>
+<tr><td>สไลด์</td><td>เหยียบ ล่าง ค้างไว้</td><td><span class="key">S</span> หรือ <span class="key">ลูกศรลง</span></td><td>ปล่อยเท้าเพื่อลุกขึ้นวิ่งต่อ</td></tr>
+</table>
+<div class="tip">เกมจำการเหยียบกระโดดไว้ 0.3 วินาที ถ้าเหยียบเร็วกว่าตอนลงพื้นเล็กน้อย ตัวละครจะกระโดดให้ทันทีที่เท้าแตะพื้น</div>
+
+<h3>4.2 ช่วงสอนเล่นก่อนเริ่ม</h3>
+<p>ก่อนเริ่มวิ่งจริง เกมจะหยุดให้ฝึก 2 ขั้น: กระโดดข้ามหิน และสไลด์ลอดหินย้อย กด <span class="key">Esc</span> หรือ <span class="key">Enter</span> เพื่อข้ามได้</p>
+<figure><img src="manual_images/m06_runner_tutorial_jump.png"><figcaption>ภาพที่ 4 ช่วงสอนเล่นขั้นที่ 1: เหยียบบนเพื่อกระโดด</figcaption></figure>
+<figure><img src="manual_images/m07_runner_tutorial_slide.png"><figcaption>ภาพที่ 5 ช่วงสอนเล่นขั้นที่ 2: เหยียบล่างค้างเพื่อสไลด์</figcaption></figure>
+<h3>4.3 หน้าจอระหว่างเล่น</h3>
+<ul>
+<li><b>SCORE</b> คะแนน และ <b>DISTANCE</b> ระยะทางที่วิ่งได้ (มุมบนซ้าย)</li>
+<li><b>หัวใจ 3 ดวง</b> ชนสิ่งกีดขวาง = เสียหัวใจ 1 ดวง หัวใจหมดหรือตกหลุม = จบเกม</li>
+<li>ตัวเลขมุมขวาบน คือจำนวนเหรียญที่เก็บได้</li>
+</ul>
+<div class="keep"><h3>4.4 ไอเทม</h3>
+<figure><img src="manual_images/m05_items.png"><figcaption>ภาพที่ 6 ไอเทมในเกมวิ่ง</figcaption></figure>
+<table>
+<tr><th>ไอเทม</th><th>ผล</th></tr>
+<tr><td>เหรียญ</td><td>เพิ่มคะแนนและจำนวนเหรียญ</td></tr>
+<tr><td>ขวดหัวใจ</td><td>ฟื้นหัวใจ 1 ดวง (โผล่เฉพาะตอนหัวใจไม่เต็ม)</td></tr>
+<tr><td>แม่เหล็ก</td><td>ดูดเหรียญรอบตัวเข้าหา 8 วินาที</td></tr>
+<tr><td>โล่</td><td>กันการชนได้ 1 ครั้ง อยู่ได้ 10 วินาที ใกล้หมดจะกะพริบเตือน</td></tr>
+<tr><td>วิ่งเร็ว (Blast)</td><td>พุ่งเร็ว ชนสิ่งกีดขวางแตกกระจาย และลอยข้ามหลุมได้ หมดแล้วอมตะกะพริบสั้นๆ ให้ตั้งตัว</td></tr>
+<tr><td>ตัวยักษ์ (Giant)</td><td>ตัวใหญ่ขึ้น 6 วินาที ชนสิ่งกีดขวางแตกกระจาย</td></tr>
+</table>
+</div>
+<h3>4.5 สิ่งกีดขวาง</h3>
+<figure><img src="images/04_obstacles.png"><figcaption>ภาพที่ 7 สิ่งกีดขวางในเกมวิ่ง</figcaption></figure>
+<ul>
+<li><b>บนพื้น</b> (หิน กองหิน เห็ด คริสตัล หนาม) → กระโดดข้าม</li>
+<li><b>ห้อยจากเพดาน</b> (หินย้อย รากไม้) → สไลด์ลอด</li>
+<li><b>หลุม</b> → กระโดดข้าม ถ้าตกหลุมจบเกมทันที</li>
+<li><b>หินกลิ้ง / หินย้อยร่วง</b> → สังเกตสัญญาณเตือนแล้วหลบ</li>
+<li><b>มอนสเตอร์</b> เดินสวนเข้ามา → กระโดดข้าม หรือสไลด์ชนให้กระเด็น</li>
+</ul>
+
+<div class="keep"><h3>4.6 ระดับและโซน</h3>
+<p>ทุกครั้งที่ขึ้นระดับ จะมีข้อความเตือนสิ่งกีดขวางใหม่ และมีประตูถ้ำบนพื้นเรียบข้างหน้า วิ่งผ่านประตูแล้วฉากเปลี่ยนเป็นโซนใหม่ ความเร็วเพิ่มขึ้นทีละน้อย สูงสุด 1.4 เท่า ระดับหลังๆ มีหลุมบ่อยขึ้น</p>
+<figure><img src="images/03_zones.png"><figcaption>ภาพที่ 8 โซนทั้ง 8 ตามระยะทาง</figcaption></figure>
+<table>
+<tr><th>ระดับ</th><th>ระยะ</th><th>โซน</th><th>สิ่งที่เพิ่มเข้ามา</th></tr>
+<tr><td>1</td><td>0 ม.</td><td>Crystal Cavern</td><td>หิน หินย้อย หลุม</td></tr>
+<tr><td>2</td><td>150 ม.</td><td>Emerald Grotto</td><td>หินกลิ้ง</td></tr>
+<tr><td>3</td><td>300 ม.</td><td>Abandoned Mine</td><td>หินย้อยร่วง</td></tr>
+<tr><td>4</td><td>450 ม.</td><td>Shadow Depths</td><td>กับดักหนาม</td></tr>
+<tr><td>5</td><td>650 ม.</td><td>Frozen Grotto</td><td>ความเร็วสูงสุด</td></tr>
+<tr><td>6</td><td>850 ม.</td><td>Fungal Forest</td><td>เห็ดยักษ์</td></tr>
+<tr><td>7</td><td>1050 ม.</td><td>Amber Hollow</td><td>รากไม้ห้อย</td></tr>
+<tr><td>8</td><td>1250 ม.</td><td>Molten Core</td><td>แท่งคริสตัลแหลม</td></tr>
+</table>
+</div>
+<h3>4.7 จบเกม</h3>
+<p>หน้าสรุปผลแสดงคะแนน ระยะทาง เหรียญ เวลา แคลอรี่ และสถิติ (จำนวนกระโดด สไลด์ สิ่งกีดขวางที่ผ่าน ระดับที่ไปถึง) เลือกเล่นอีกครั้งหรือกลับหน้าเลือกเกมได้</p>
+<h2 class="pb">5. เกมที่ 3: จำลูกศร (Arrow Memory)</h2>
+<p>เกมฝึกความจำ เกมจะแสดงลูกศรทีละตัวเป็นลำดับ ผู้เล่นต้องจำแล้วเหยียบแผ่นตามลำดับให้ถูก ผ่านแต่ละรอบ ลำดับจะยาวขึ้นเรื่อยๆ</p>
+
+<h3>5.1 หน้าเลือกระดับความยาก</h3>
+<table>
+<tr><th>การกระทำ</th><th>แผ่นเหยียบ</th><th>คีย์บอร์ด / เมาส์</th></tr>
+<tr><td>เลือกระดับ</td><td>เหยียบ ซ้าย / ขวา</td><td><span class="key">A</span> <span class="key">D</span> หรือคลิก</td></tr>
+<tr><td>เริ่มเล่น</td><td>เหยียบ บน</td><td><span class="key">W</span>, <span class="key">Enter</span> หรือคลิก</td></tr>
+<tr><td>กลับหน้าเลือกเกม</td><td>เหยียบ ล่าง 2 ครั้ง</td><td><span class="key">Esc</span></td></tr>
+<tr><td>เปิด/ปิดเสียงพูด</td><td>-</td><td><span class="key">V</span> หรือคลิกไอคอนคนพูด</td></tr>
+</table>
+<table>
+<tr><th>ระดับ</th><th>เวลาเริ่มต้น</th><th>ลูกศรรอบแรก</th><th>เพิ่มต่อรอบ</th><th>ความเร็วแสดง</th></tr>
+<tr><td>ง่าย</td><td>75 วินาที</td><td>2 ตัว</td><td>+1</td><td>ช้า</td></tr>
+<tr><td>ปกติ</td><td>65 วินาที</td><td>3 ตัว</td><td>+1</td><td>ปานกลาง</td></tr>
+<tr><td>ยาก</td><td>55 วินาที</td><td>4 ตัว</td><td>+2</td><td>เร็ว</td></tr>
+</table>
+
+<h3>5.2 วิธีเล่น</h3>
+<ol>
+<li>กดเริ่ม แล้วนับถอยหลัง 3-2-1 (ครั้งเดียวต่อเกม)</li>
+<li><b>ช่วงจำ:</b> ลูกศรขึ้นทีละตัวที่กล่องกลางจอ พร้อมเสียงพูดบอกทิศ (บน / ล่าง / ซ้าย / ขวา)</li>
+<li><b>ช่วงเหยียบ:</b> ขึ้นข้อความ "เริ่มได้!" ให้เหยียบแผ่นตามลำดับที่จำไว้</li>
+<li>เหยียบถูกครบทั้งลำดับ = ผ่านรอบ ได้คะแนน แล้วรอบต่อไปลำดับยาวขึ้น</li>
+<li>เหยียบผิด = เสียหัวใจ 1 ดวง แล้วเกมแสดงลำดับเดิมให้ดูใหม่</li>
+</ol>
+<figure><img src="manual_images/m09_arrow_play_old.png"><figcaption>ภาพที่ 9 ช่วงเหยียบตามลำดับ: แถบตรงกลางแสดงความคืบหน้า (3 จาก 6)</figcaption></figure>
+<h3>5.3 หัวใจ เวลา และโบนัส</h3>
+<ul>
+<li>เริ่มด้วยหัวใจ 3 ดวง หัวใจหมดหรือเวลาหมด = จบเกม</li>
+<li>ผ่านทุก 3 รอบ ได้หัวใจเพิ่ม 1 ดวง และเวลาเพิ่ม 30 วินาที</li>
+<li>เมนูด้านขวาแสดงจำนวนก้าวที่เหยียบ และแคลอรี่โดยประมาณ</li>
+</ul>
+
+<h3>5.4 จบเกม</h3>
+<p>หน้าสรุปผลแสดงจำนวนรอบที่ผ่าน คะแนน จำนวนก้าว แคลอรี่ เวลา และระดับความยาก เลือก "เลือกระดับความยาก" "เล่นอีกรอบ" หรือ "หน้าเลือกเกม" ได้</p>
+<figure><img src="manual_images/m10_arrow_result_old.png"><figcaption>ภาพที่ 10 หน้าสรุปผล Arrow Memory</figcaption></figure>
+<h2 class="pb">6. การคำนวณแคลอรี่</h2>
+<table>
+<tr><th>เกม</th><th>วิธีคำนวณ</th></tr>
+<tr><td>วิ่งผจญภัย, ด่านสอนเล่นถ้ำ</td><td>สูตร METs: (METs × 3.5 × น้ำหนัก กก.) ÷ 200 × เวลา (นาที)<br>เกมวิ่ง METs = 5.0, ด่านสอนเล่น METs = 4.0, น้ำหนักเริ่มต้น 60 กก.</td></tr>
+<tr><td>ถ้ำ Cave 1–3</td><td>(ก้าว × 0.04) + (ขุด × 0.1) + (โจมตี × 0.08)</td></tr>
+<tr><td>จำลูกศร</td><td>จำนวนก้าว × 0.04 (ค่าโดยประมาณ)</td></tr>
+</table>
+<p>ตัวอย่าง: น้ำหนัก 60 กก. เล่นเกมวิ่ง 5 นาที = (5 × 3.5 × 60) ÷ 200 × 5 = <b>26.25 kcal</b></p>
+
+</body>
+</html>
