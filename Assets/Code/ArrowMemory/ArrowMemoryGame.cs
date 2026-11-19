@@ -10,8 +10,9 @@ using UnityEngine.UI;
 /// เกมความจำ: ดูลูกศรที่สว่างทีละอัน แล้วเหยียบตามลำดับ ยิ่งผ่านมาก ลำดับยิ่งยาว
 /// - 3 ระดับ (ง่าย/ปกติ/ยาก) เริ่มด้วย 3 หัวใจ ผิด = เสียหัวใจและดูลำดับใหม่
 /// - ผ่านทุก 3 รอบ ได้หัวใจ +1 และเวลา +30 วินาที / หมดเวลาหรือหมดหัวใจ = จบเกม
-/// - เสียงคนพูดบอกทิศทาง (ไฟล์เสียงที่อัดไว้) เปิด/ปิดได้
+/// - เสียงพูดบอกทิศทาง เลือกได้ 3 แบบ: ปิดเสียง / เสียง AI (Windows TTS) / เสียงคนจริง (ไฟล์ที่อัดไว้)
 /// - ใช้ปุ่มเดิน 4 ทิศของทั้งเกม (GameInputBindings: แผ่นเหยียบ + คีย์บอร์ด ตั้งค่าได้ในหน้า Option)
+/// - ทุกปุ่มใช้แผ่นเหยียบได้: หน้าเมนู ลง = เลื่อนแถว, ซ้าย/ขวา = เปลี่ยนค่า, ขึ้น = กดปุ่ม / ระหว่างเล่น เหยียบลงค้างไว้ = หยุดเกม
 /// UI ทั้งหมดสร้างด้วยโค้ด ไม่ต้องจัดใน Scene
 /// </summary>
 public class ArrowMemoryGame : MonoBehaviour
@@ -38,22 +39,30 @@ public class ArrowMemoryGame : MonoBehaviour
     private const float BonusSeconds = 30f, KcalPerStep = 0.04f;
 
     [Header("Scene")]
-    [Tooltip("ฉากที่กลับไปเมื่อออกจากเกม (เหยียบลง 2 ครั้งในหน้าเลือกระดับ)")]
+    [Tooltip("ฉากที่กลับไปเมื่อออกจากเกม (ปุ่ม \"หน้าเลือกเกม\")")]
     [SerializeField] private string exitSceneName = "QuestBoard";
 
-    [Header("Voice (ถ้าว่าง จะโหลดจาก Resources/ArrowMemory)")]
+    [Header("Voice: เสียงคนจริง (ถ้าว่าง จะโหลด ArrowVoice_* จาก Resources/ArrowMemory)")]
     [SerializeField] private AudioClip voiceStart;
     [SerializeField] private AudioClip voiceUp;
     [SerializeField] private AudioClip voiceDown;
     [SerializeField] private AudioClip voiceLeft;
     [SerializeField] private AudioClip voiceRight;
+
+    [Header("Voice: เสียง AI (ถ้าว่าง จะโหลด ArrowVoiceAI_* จาก Resources/ArrowMemory)")]
+    [SerializeField] private AudioClip aiStart;
+    [SerializeField] private AudioClip aiUp;
+    [SerializeField] private AudioClip aiDown;
+    [SerializeField] private AudioClip aiLeft;
+    [SerializeField] private AudioClip aiRight;
     [Range(0f, 1f)] [SerializeField] private float voiceVolume = 1f;
     [Range(0f, 1f)] [SerializeField] private float toneVolume = 0.35f;
 
     [Header("Pad Menu")]
     [Tooltip("หน่วงเวลาก่อนรับปุ่มในหน้าเมนู/สรุปผล กันเท้าที่ยังเหยียบอยู่")]
     [SerializeField] private float menuInputDelay = 0.6f;
-    [SerializeField] private float doubleTapWindow = 0.5f;
+    [Tooltip("ระหว่างเล่น เหยียบลงค้างไว้นานเท่านี้ (วินาที) = หยุดเกม")]
+    [SerializeField] private float holdToPause = 1.2f;
 
     // ---------- สี (ตามเวอร์ชันเว็บ) ----------
     private static readonly Color Ink = Hex(0xedf7ff), Muted = Hex(0x9db1c8);
@@ -74,8 +83,12 @@ public class ArrowMemoryGame : MonoBehaviour
     private int inputIndex, score, round, steps, lives = StartLives, maxLives = StartLives;
     private float startedAt, bonusTime;
     private Coroutine flowRoutine;
-    private bool voiceOn = true;
-    private float menuShownAt, lastDownTap = -10f;
+    private enum VoiceMode { Off, AI, Human }
+    private VoiceMode voiceMode = VoiceMode.AI;
+    private bool VoiceOn => voiceMode != VoiceMode.Off;
+    private bool paused;
+    private float downHeldSince = -1f, downPenaltyAt = -1f;
+    private float menuShownAt;
     private bool showingResults;
     private bool warnedReload;
     private bool countingDown;
@@ -91,7 +104,8 @@ public class ArrowMemoryGame : MonoBehaviour
     private readonly Dictionary<int, Sprite> ringSprites = new Dictionary<int, Sprite>();
     private RectTransform canvasRoot;
     private Text scoreText, roundText, timeText, roundLabel, phaseText, doneText, totalText, progressText, feedbackText, stepsText, caloriesText, heartHint;
-    private Image signalBox, signalArrow, signalGlow, seqPanel, voiceButtonImage, homeButtonImage;
+    private Image signalBox, signalArrow, signalGlow, seqPanel, voiceButtonImage, homeButtonImage, holdFill;
+    private Text voiceBadge;
     private Text signalQuestion;
     private RectTransform slotGrid, heartsRow, timeStat;
     private readonly List<Image> slots = new List<Image>();
@@ -101,6 +115,7 @@ public class ArrowMemoryGame : MonoBehaviour
     private GameObject overlay;
     private RectTransform modal;
     private readonly List<Image> difficultyTiles = new List<Image>();
+    private readonly List<Image> voiceTiles = new List<Image>();
     private float feedbackUntil, heartsGainUntil, timeGainUntil, doneBumpUntil, signalLitScale;
     private int wrongSlot = -1;
     private float wrongSlotUntil;
@@ -113,7 +128,9 @@ public class ArrowMemoryGame : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1f;
-        voiceOn = PlayerPrefs.GetInt("ArrowMemoryVoice", 1) == 1;
+        // ค่าเก่า ArrowMemoryVoice (เปิด/ปิด) แปลงเป็น เสียง AI / ปิดเสียง
+        int legacy = PlayerPrefs.GetInt("ArrowMemoryVoice", 1) == 1 ? (int)VoiceMode.AI : (int)VoiceMode.Off;
+        voiceMode = (VoiceMode)Mathf.Clamp(PlayerPrefs.GetInt("ArrowMemoryVoiceMode", legacy), 0, 2);
         difficulty = Mathf.Clamp(PlayerPrefs.GetInt("ArrowMemoryDifficulty", 1), 0, Difficulties.Length - 1);
 
         LoadVoiceClips();
@@ -152,7 +169,7 @@ public class ArrowMemoryGame : MonoBehaviour
     #region Input
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.V)) ToggleVoice();
+        if (Input.GetKeyDown(KeyCode.V)) CycleVoice(1);
 
         Dir? pressed = ReadDirection();
 
@@ -162,8 +179,57 @@ public class ArrowMemoryGame : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) { ShowHome(); return; }
+        if (Input.GetKeyDown(KeyCode.Escape)) { OpenPause(); return; }
         if (pressed.HasValue) AcceptDirection(pressed.Value);
+        UpdateHoldToPause();
+    }
+
+    // ระหว่างเล่น: เหยียบลงค้างไว้ = หยุดเกม (แทนการเอาเมาส์กดปุ่มด้านบน) มีวงแหวนบนปุ่มบ้านบอกความคืบหน้า
+    private static bool IsDownHeld() =>
+        GameInputBindings.GetHeld(GameAction.MoveDown) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+
+    private void UpdateHoldToPause()
+    {
+        bool held = IsDownHeld();
+        if (!held || !running)
+        {
+            downHeldSince = -1f;
+            holdFill.fillAmount = 0f;
+            return;
+        }
+        if (downHeldSince < 0f) downHeldSince = Time.unscaledTime;
+
+        // เหยียบปกติไม่ถึง 0.25 วินาที ไม่ต้องโชว์อะไร
+        const float showAfter = 0.25f;
+        float held01 = Mathf.Clamp01((Time.unscaledTime - downHeldSince - showAfter) / Mathf.Max(0.1f, holdToPause - showAfter));
+        holdFill.fillAmount = held01;
+        if (held01 > 0f) Flash("ค้างไว้เพื่อหยุดเกม", Muted);
+        if (held01 >= 1f)
+        {
+            RefundHoldPress();
+            OpenPause();
+        }
+    }
+
+    // การเหยียบลงที่เริ่มค้างเพื่อหยุดเกม ถูกนับเป็นคำตอบผิดไปแล้ว: คืนหัวใจและจำนวนก้าว ไม่ให้เสียอะไรจากการหยุดเกม
+    private void RefundHoldPress()
+    {
+        bool sameStep = downPenaltyAt >= 0f && downHeldSince >= 0f && downPenaltyAt >= downHeldSince - 0.05f;
+        downPenaltyAt = -1f;
+        if (!sameStep) return;
+
+        lives = Mathf.Min(lives + 1, maxLives);
+        steps = Mathf.Max(0, steps - 1);
+        UpdateHud();
+        UpdateHeartsColors();
+        if (phase == Phase.Finished)
+        {
+            // หัวใจดวงสุดท้าย: ยกเลิกการจบเกม แล้วโชว์ลำดับเดิมให้ดูใหม่หลังกดเล่นต่อ
+            StopFlow();
+            phase = Phase.Retry;
+            progressText.text = "จะแสดงลำดับให้ดูอีกครั้ง";
+            flowRoutine = StartCoroutine(After(0.4f, () => { if (running) PlaySequence(); }));
+        }
     }
 
     // ทิศที่กด: แผ่นเหยียบ / ปุ่มที่ตั้งในหน้า Option + W A S D + ปุ่มลูกศร ใช้ได้เสมอ
@@ -176,11 +242,11 @@ public class ArrowMemoryGame : MonoBehaviour
         return null;
     }
 
-    // หน้าเลือกระดับ / หน้าสรุปผล: แผ่นเหยียบ + คีย์บอร์ด + เมาส์
+    // หน้าเลือกระดับ / หน้าหยุดเกม / หน้าสรุปผล: แผ่นเหยียบ + คีย์บอร์ด + เมาส์
     private void HandleMenuInput(Dir? pressed)
     {
         bool confirmKey = Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter);
-        if (Time.time - menuShownAt < menuInputDelay) return;
+        if (Time.unscaledTime - menuShownAt < menuInputDelay) return;
 
         if (showingResults)
         {
@@ -192,17 +258,61 @@ public class ArrowMemoryGame : MonoBehaviour
             return;
         }
 
-        // ซ้าย/ขวา = เลือกระดับ / ขึ้น หรือ Enter = เริ่ม / ลง 2 ครั้ง หรือ Esc = หน้าเลือกเกม
-        // เปลี่ยนระดับด้วยแผ่นเหยียบ/คีย์บอร์ด = กลับมาเลือกปุ่ม "เริ่ม" (ปุ่มที่สว่างคือปุ่มที่จะถูกกด)
-        if (pressed == Dir.Left) { SelectDifficulty(difficulty - 1); focusIndex = 1; }
-        else if (pressed == Dir.Right) { SelectDifficulty(difficulty + 1); focusIndex = 1; }
-        else if (pressed == Dir.Up || confirmKey)
+        // หน้าแรก / หน้าหยุดเกม เป็นแถว: ลง = เลื่อนแถว (กรอบสีฟ้า) / ซ้าย-ขวา = เปลี่ยนค่าในแถวนั้น
+        // ขึ้น หรือ Enter = กดปุ่มที่สว่างอยู่ (ค่าเริ่มต้น "เริ่ม" / "เล่นต่อ") ไม่ว่ากรอบอยู่แถวไหน
+        if (pressed == Dir.Down) SetMenuRow(menuRow + 1, true);
+        else if (pressed == Dir.Left || pressed == Dir.Right)
         {
-            if (focusIndex >= 0 && focusIndex < focusActions.Count) focusActions[focusIndex]();
-            else StartGame();
+            int step = pressed == Dir.Left ? -1 : 1;
+            switch (CurrentRow)
+            {
+                case MenuRow.Difficulty: SelectDifficulty(difficulty + step); break;
+                case MenuRow.Voice: CycleVoice(step); break;
+                case MenuRow.Buttons: SetFocus(focusIndex + step, true); break;
+            }
         }
-        else if (pressed == Dir.Down && DoubleTap(ref lastDownTap)) ExitGame();
-        if (Input.GetKeyDown(KeyCode.Escape)) ExitGame();
+        else if ((pressed == Dir.Up || confirmKey) && focusIndex >= 0 && focusIndex < focusActions.Count) focusActions[focusIndex]();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (paused) ResumeGame();
+            else ExitGame();
+        }
+    }
+
+    // ---------- แถวในหน้าแรก / หน้าหยุดเกม ----------
+    private enum MenuRow { Difficulty, Voice, Buttons }
+    private readonly List<MenuRow> menuRows = new List<MenuRow>();
+    private readonly List<Image> menuRowFrames = new List<Image>();
+    private int menuRow;
+    private MenuRow CurrentRow => menuRows.Count > 0 ? menuRows[Mathf.Clamp(menuRow, 0, menuRows.Count - 1)] : MenuRow.Buttons;
+
+    // กรอบของแถว สร้างก่อนเนื้อหาในแถว จะได้อยู่ข้างหลัง / เอาเมาส์ชี้ = เลือกแถวนั้น
+    private void AddMenuRow(MenuRow kind, float y, float height)
+    {
+        int index = menuRows.Count;
+        Image frame = NewPanel("RowFrame", modal, Color.clear, Color.clear, 18, 2);
+        Place(frame.rectTransform, 0, y, 790, height);
+        menuRows.Add(kind);
+        menuRowFrames.Add(frame);
+        frame.raycastTarget = true;
+        AddHover(frame.gameObject, () => SetMenuRow(index, false));
+    }
+
+    private void SetMenuRow(int index, bool sound)
+    {
+        if (menuRows.Count == 0) return;
+        int next = (index + menuRows.Count) % menuRows.Count;
+        if (next != menuRow && sound) PlayTone(560f, 0.05f, Wave.Triangle);
+        menuRow = next;
+    }
+
+    private void ClearMenuRows()
+    {
+        menuRows.Clear();
+        menuRowFrames.Clear();
+        voiceTiles.Clear();
+        menuRow = 0;
     }
 
     // ---------- ปุ่มที่เลื่อนเลือกได้ในหน้าสรุปผล ----------
@@ -251,13 +361,6 @@ public class ArrowMemoryGame : MonoBehaviour
         trigger.triggers.Add(entry);
     }
 
-    private bool DoubleTap(ref float last)
-    {
-        bool ok = Time.time - last <= doubleTapWindow;
-        last = ok ? -10f : Time.time;
-        if (!ok) Flash("เหยียบลงอีกครั้งเพื่อยืนยัน", Muted);
-        return ok;
-    }
     #endregion
 
     #region Game Flow
@@ -353,7 +456,7 @@ public class ArrowMemoryGame : MonoBehaviour
             AudioClip clip = VoiceFor(d);
             // เปิดเสียงพูดอยู่: ยืดเวลาโชว์ให้พอพูดจบ ไม่โดนลูกศรถัดไปตัดกลางคำ
             float stepShow = show;
-            if (voiceOn && clip != null)
+            if (VoiceOn && clip != null)
                 stepShow = Mathf.Max(show, clip.length / voicePitch - gap + 0.03f);
             RenderSeq("preview", i);
             SetSignal(d);
@@ -378,7 +481,7 @@ public class ArrowMemoryGame : MonoBehaviour
         // เสียง "เริ่ม" พูดครั้งเดียวต่อเกม: หลังลูกศรรอบแรกโชว์ครบ ถึงตาผู้เล่นเหยียบครั้งแรก
         if (!startVoicePlayed)
         {
-            PlayVoice(voiceStart, 1f);
+            PlayVoice(StartClip, 1f);
             startVoicePlayed = true;
         }
         flowRoutine = null;
@@ -394,12 +497,14 @@ public class ArrowMemoryGame : MonoBehaviour
         if (!correct)
         {
             lives--;
+            // จำไว้ว่าเสียหัวใจจากการเหยียบลง: ถ้าเป็นจังหวะเริ่มเหยียบค้างเพื่อหยุดเกม จะคืนหัวใจให้
+            downPenaltyAt = d == Dir.Down ? Time.unscaledTime : -1f;
             UpdateHud();
             PlayTone(150f, 0.16f, Wave.Saw);
             Flash("ลองใหม่", Pink);
             RenderSeq("bad", 0, inputIndex);
             progressText.text = lives > 0 ? "จะแสดงลำดับให้ดูอีกครั้ง" : "หมดชีวิตแล้ว";
-            if (lives <= 0) { phase = Phase.Finished; flowRoutine = StartCoroutine(After(0.65f, Finish)); return; }
+            if (lives <= 0) { phase = Phase.Finished; flowRoutine = StartCoroutine(FinishUnlessHolding()); return; }
             phase = Phase.Retry;
             flowRoutine = StartCoroutine(After(0.7f, () => { if (running) PlaySequence(); }));
             return;
@@ -455,6 +560,14 @@ public class ArrowMemoryGame : MonoBehaviour
         flowRoutine = null;
     }
 
+    // หัวใจหมดจากการเหยียบลง: ถ้ายังเหยียบค้างอยู่ อาจกำลังจะหยุดเกม รอให้ค้างจนครบหรือปล่อยเท้าก่อนค่อยจบเกม
+    private IEnumerator FinishUnlessHolding()
+    {
+        yield return new WaitForSeconds(0.65f);
+        while (running && downHeldSince >= 0f && IsDownHeld()) yield return null;
+        Finish();
+    }
+
     private IEnumerator After(float seconds, System.Action action)
     {
         yield return new WaitForSeconds(seconds);
@@ -479,13 +592,29 @@ public class ArrowMemoryGame : MonoBehaviour
         if (voiceDown == null) voiceDown = Resources.Load<AudioClip>("ArrowMemory/ArrowVoice_Down");
         if (voiceLeft == null) voiceLeft = Resources.Load<AudioClip>("ArrowMemory/ArrowVoice_Left");
         if (voiceRight == null) voiceRight = Resources.Load<AudioClip>("ArrowMemory/ArrowVoice_Right");
+        if (aiStart == null) aiStart = Resources.Load<AudioClip>("ArrowMemory/ArrowVoiceAI_Start");
+        if (aiUp == null) aiUp = Resources.Load<AudioClip>("ArrowMemory/ArrowVoiceAI_Up");
+        if (aiDown == null) aiDown = Resources.Load<AudioClip>("ArrowMemory/ArrowVoiceAI_Down");
+        if (aiLeft == null) aiLeft = Resources.Load<AudioClip>("ArrowMemory/ArrowVoiceAI_Left");
+        if (aiRight == null) aiRight = Resources.Load<AudioClip>("ArrowMemory/ArrowVoiceAI_Right");
     }
 
-    private AudioClip VoiceFor(Dir d) => d == Dir.Up ? voiceUp : d == Dir.Left ? voiceLeft : d == Dir.Down ? voiceDown : voiceRight;
+    private AudioClip StartClip => voiceMode == VoiceMode.Human ? voiceStart : aiStart;
+
+    private AudioClip VoiceFor(Dir d)
+    {
+        bool human = voiceMode == VoiceMode.Human;
+        if (d == Dir.Up) return human ? voiceUp : aiUp;
+        if (d == Dir.Left) return human ? voiceLeft : aiLeft;
+        if (d == Dir.Down) return human ? voiceDown : aiDown;
+        return human ? voiceRight : aiRight;
+    }
+
+    private static string VoiceLabel(VoiceMode mode) => mode == VoiceMode.Off ? "ปิดเสียง" : mode == VoiceMode.AI ? "เสียง AI" : "เสียงคนจริง";
 
     private void PlayVoice(AudioClip clip, float pitch)
     {
-        if (!voiceOn || clip == null) return;
+        if (!VoiceOn || clip == null) return;
         // ตัดเสียงเก่าก่อนพูดคำใหม่ (เหมือน speechSynthesis.cancel() ในเวอร์ชันเว็บ)
         voiceSource.Stop();
         voiceSource.clip = clip;
@@ -494,13 +623,18 @@ public class ArrowMemoryGame : MonoBehaviour
         voiceSource.Play();
     }
 
-    private void ToggleVoice()
+    // เปลี่ยนเสียงพูด ปิดเสียง → เสียง AI → เสียงคนจริง (ปุ่มด้านบน / ปุ่ม V / แถวเสียงพูดในเมนู)
+    private void CycleVoice(int step)
     {
-        voiceOn = !voiceOn;
-        PlayerPrefs.SetInt("ArrowMemoryVoice", voiceOn ? 1 : 0);
+        voiceMode = (VoiceMode)(((int)voiceMode + step + 3) % 3);
+        PlayerPrefs.SetInt("ArrowMemoryVoiceMode", (int)voiceMode);
         RenderVoiceButton();
-        if (voiceOn) PlayVoice(voiceStart, 1f);
+        // อยู่ในเมนู/หยุดเกม: พูด "เริ่ม" ให้ฟังตัวอย่าง / กำลังเล่น: ไม่พูดแทรก แค่ขึ้นข้อความ
+        bool inMenu = overlay != null && overlay.activeSelf;
+        if (VoiceOn && (inMenu || !running)) PlayVoice(StartClip, 1f);
         else voiceSource.Stop();
+        if (!inMenu) Flash(VoiceLabel(voiceMode), Cyan);
+        PlayTone(600f + (int)voiceMode * 110f, 0.06f, Wave.Triangle);
     }
 
     private enum Wave { Sine, Triangle, Saw }
@@ -652,19 +786,21 @@ public class ArrowMemoryGame : MonoBehaviour
         feedbackUntil = Time.time + 0.5f;
     }
 
-    // ปุ่มรูปคนพูด: เปิด = สีฟ้า มีคลื่นเสียง / ปิด = สีเทา มีเส้นขีดทับ (เหมือนเวอร์ชันเว็บ)
+    // ปุ่มรูปคนพูด: เปิด = สีฟ้า มีคลื่นเสียง + ป้าย AI / คน / ปิด = สีเทา มีเส้นขีดทับ (เหมือนเวอร์ชันเว็บ)
     private void RenderVoiceButton()
     {
-        Color c = voiceOn ? Cyan : Muted;
-        SetBorder(voiceButtonImage, voiceOn ? Cyan : LineColor);
-        voiceButtonImage.color = voiceOn ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.12f) : new Color(1, 1, 1, 0.03f);
+        Color c = VoiceOn ? Cyan : Muted;
+        SetBorder(voiceButtonImage, VoiceOn ? Cyan : LineColor);
+        voiceButtonImage.color = VoiceOn ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.12f) : new Color(1, 1, 1, 0.03f);
         ChildImage(voiceButtonImage, "Person").color = c;
         Image waves = ChildImage(voiceButtonImage, "Waves");
         waves.color = c;
-        waves.enabled = voiceOn;
+        waves.enabled = VoiceOn;
         Image slash = ChildImage(voiceButtonImage, "Slash");
         slash.color = c;
-        slash.enabled = !voiceOn;
+        slash.enabled = !VoiceOn;
+        voiceBadge.text = voiceMode == VoiceMode.AI ? "AI" : voiceMode == VoiceMode.Human ? "คน" : "";
+        voiceBadge.color = c;
     }
 
     private void AnimateUI()
@@ -686,8 +822,8 @@ public class ArrowMemoryGame : MonoBehaviour
 
         // ปุ่มเสียงพูด / ปุ่มบ้าน: เอาเมาส์ชี้แล้วมีสีขึ้น
         bool voiceHover = hovered.Contains(voiceButtonImage);
-        Color voiceAccent = voiceOn ? Cyan : Muted;
-        voiceButtonImage.color = new Color(voiceAccent.r, voiceAccent.g, voiceAccent.b, voiceHover ? 0.35f : voiceOn ? 0.12f : 0.03f);
+        Color voiceAccent = VoiceOn ? Cyan : Muted;
+        voiceButtonImage.color = new Color(voiceAccent.r, voiceAccent.g, voiceAccent.b, voiceHover ? 0.35f : VoiceOn ? 0.12f : 0.03f);
         voiceButtonImage.transform.localScale = Vector3.one * (voiceHover ? 1.06f : 1f);
         bool homeHover = hovered.Contains(homeButtonImage);
         homeButtonImage.color = homeHover ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.35f) : new Color(1, 1, 1, 0.03f);
@@ -715,31 +851,47 @@ public class ArrowMemoryGame : MonoBehaviour
             slots[wrongSlot].rectTransform.localEulerAngles = new Vector3(0, 0, Mathf.Sin(now * 60f) * 10f * k);
         }
 
-        // ปุ่มในหน้าแรก/หน้าสรุปผล: ปุ่มที่เลือกอยู่ = พื้นสีฟ้าเต็ม ตัวอักษรเข้ม ขยาย-หดเป็นจังหวะ / ปุ่มอื่น = เส้นขอบอย่างเดียว
+        // เมนูใช้เวลาจริง (unscaled) เพราะตอนหยุดเกม timeScale = 0
+        float ut = Time.unscaledTime, udt = Time.unscaledDeltaTime;
+
+        // ปุ่มในหน้าแรก/หน้าหยุดเกม/หน้าสรุปผล: ปุ่มที่เลือกอยู่ = พื้นสีฟ้าเต็ม ตัวอักษรเข้ม ขยาย-หดเป็นจังหวะ / ปุ่มอื่น = เส้นขอบอย่างเดียว
         bool menuOpen = overlay != null && overlay.activeSelf;
         for (int i = 0; i < focusButtons.Count; i++)
         {
             Image b = focusButtons[i];
             if (b == null) continue;
             bool sel = menuOpen && i == focusIndex;
-            float glow = 0.85f + 0.15f * Mathf.Sin(now * 6f);
+            float glow = 0.85f + 0.15f * Mathf.Sin(ut * 6f);
             b.color = sel ? new Color(Cyan.r * glow, Cyan.g * glow, Cyan.b * glow, 1f) : new Color(1f, 1f, 1f, 0.04f);
             SetBorder(b, sel ? Color.white : Hex(0x7086ad));
             Text label = b.GetComponentInChildren<Text>();
             if (label != null) label.color = sel ? DeepBg : Ink;
-            float target = sel ? 1.08f + 0.03f * Mathf.Sin(now * 6f) : 1f;
-            b.transform.localScale = Vector3.Lerp(b.transform.localScale, Vector3.one * target, Time.deltaTime * 14f);
+            float target = sel ? 1.08f + 0.03f * Mathf.Sin(ut * 6f) : 1f;
+            b.transform.localScale = Vector3.Lerp(b.transform.localScale, Vector3.one * target, udt * 14f);
         }
 
-        // ระดับที่เลือก: พื้นสีฟ้าชัดขึ้น + ขยายเล็กน้อย
-        for (int i = 0; i < difficultyTiles.Count; i++)
+        // ระดับที่เลือก / เสียงที่เลือก: พื้นสีฟ้าชัดขึ้น + ขยายเล็กน้อย
+        for (int i = 0; i < difficultyTiles.Count; i++) AnimateChoiceTile(difficultyTiles[i], i == difficulty, ut, udt);
+        for (int i = 0; i < voiceTiles.Count; i++) AnimateChoiceTile(voiceTiles[i], i == (int)voiceMode, ut, udt);
+
+        // แถวที่เลือกอยู่ (ซ้าย/ขวาจะเปลี่ยนค่าแถวนี้): กรอบสีฟ้า
+        for (int i = 0; i < menuRowFrames.Count; i++)
         {
-            bool sel = i == difficulty;
-            difficultyTiles[i].color = sel ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.32f + 0.08f * Mathf.Sin(now * 5f)) : Hex(0x10203d);
-            SetBorder(difficultyTiles[i], sel ? Cyan : Hex(0x48648f));
-            float target = sel ? 1.05f : 1f;
-            difficultyTiles[i].transform.localScale = Vector3.Lerp(difficultyTiles[i].transform.localScale, Vector3.one * target, Time.deltaTime * 14f);
+            Image frame = menuRowFrames[i];
+            if (frame == null) continue;
+            bool sel = menuOpen && i == menuRow;
+            frame.color = sel ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.07f) : Color.clear;
+            SetBorder(frame, sel ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.6f + 0.3f * Mathf.Sin(ut * 5f)) : Color.clear);
         }
+    }
+
+    private static void AnimateChoiceTile(Image tile, bool sel, float ut, float udt)
+    {
+        if (tile == null) return;
+        tile.color = sel ? new Color(Cyan.r, Cyan.g, Cyan.b, 0.32f + 0.08f * Mathf.Sin(ut * 5f)) : Hex(0x10203d);
+        SetBorder(tile, sel ? Cyan : Hex(0x48648f));
+        float target = sel ? 1.05f : 1f;
+        tile.transform.localScale = Vector3.Lerp(tile.transform.localScale, Vector3.one * target, udt * 14f);
     }
 
     private void RebuildHearts()
@@ -765,6 +917,10 @@ public class ArrowMemoryGame : MonoBehaviour
     private void ShowHome()
     {
         StopFlow();
+        paused = false;
+        Time.timeScale = 1f;
+        downHeldSince = -1f;
+        holdFill.fillAmount = 0f;
         running = false;
         countingDown = false;
         showingResults = false;
@@ -779,12 +935,18 @@ public class ArrowMemoryGame : MonoBehaviour
 
         ClearModal();
         difficultyTiles.Clear();
-        modal.sizeDelta = new Vector2(820, 640);
+        ClearMenuRows();
+        modal.sizeDelta = new Vector2(820, 770);
         Text title = NewText("Title", modal, "Arrow <color=#3EE8FF>Memory</color>", 76, Ink, TextAnchor.MiddleCenter, FontStyle.Bold);
         Place(title.rectTransform, 0, -40, 800, 100);
         Text desc = NewText("Desc", modal, "จำลูกศรที่ปรากฏ แล้วเหยียบตามลำดับให้ถูกต้อง\nยิ่งไปได้ไกล ลำดับจะยิ่งยาวและเร็วขึ้น", 28, Hex(0xcbd9e8), TextAnchor.MiddleCenter);
         Place(desc.rectTransform, 0, -150, 780, 90);
         BuildArrowLine(modal, -250);
+
+        // แถว 1: ระดับความยาก / แถว 2: เสียงพูด / แถว 3: ปุ่ม
+        AddMenuRow(MenuRow.Difficulty, -370, 118);
+        AddMenuRow(MenuRow.Voice, -498, 86);
+        AddMenuRow(MenuRow.Buttons, -604, 90);
 
         for (int i = 0; i < Difficulties.Length; i++)
         {
@@ -794,24 +956,97 @@ public class ArrowMemoryGame : MonoBehaviour
             Text t = NewText("Label", tile.rectTransform, $"{Difficulties[i].label}\n<size=18><color=#9DB1C8>{Difficulties[i].hint}</color></size>", 32, Ink, TextAnchor.MiddleCenter, FontStyle.Bold);
             Stretch(t.rectTransform);
             AddClick(tile.gameObject, () => SelectDifficulty(idx));
-            AddHover(tile.gameObject, () => SelectDifficulty(idx));
+            AddHover(tile.gameObject, () => { SelectDifficulty(idx); SetMenuRow(0, false); });
             difficultyTiles.Add(tile);
         }
 
-        // ปุ่มหน้าแรก: เริ่มที่ "เริ่ม" (เหยียบขึ้น/Enter = กดปุ่มที่เลือก) เอาเมาส์ชี้เพื่อเลือกปุ่มอื่น
+        BuildVoiceRow(-498, 1);
+
+        // ปุ่มหน้าแรก: เริ่มที่ "เริ่ม" (เหยียบขึ้น/Enter = กดปุ่มที่เลือก) แถวปุ่ม ซ้าย/ขวา เพื่อเลือก "หน้าเลือกเกม"
         focusButtons.Clear(); focusActions.Clear();
         Image back = NewButton(modal, "หน้าเลือกเกม", false, () => ExitGame());
-        Place(back.rectTransform, -150, -490, 260, 64);
+        Place(back.rectTransform, -150, -604, 260, 64);
         AddFocusButton(back, ExitGame);
         Image start = NewButton(modal, "เริ่ม", true, StartGame);
-        Place(start.rectTransform, 150, -490, 260, 64);
+        Place(start.rectTransform, 150, -604, 260, 64);
         AddFocusButton(start, StartGame);
         focusIndex = 1;
 
-        Text hint = NewText("PadHint", modal, "ซ้าย/ขวา (A/D) = เลือกระดับ     ขึ้น (W) หรือ Enter = เริ่ม     ลง 2 ครั้ง หรือ Esc = หน้าเลือกเกม     คลิกเมาส์ได้", 20, Muted, TextAnchor.MiddleCenter);
-        Place(hint.rectTransform, 0, -580, 800, 40);
+        Text hint = NewText("PadHint", modal, "ลง (S) = เลื่อนแถว     ซ้าย/ขวา (A/D) = เปลี่ยนค่าในแถว     ขึ้น (W) หรือ Enter = กดปุ่มที่สว่าง\nระหว่างเล่น: เหยียบลงค้างไว้ = หยุดเกม     คลิกเมาส์ได้", 19, Muted, TextAnchor.MiddleCenter);
+        Place(hint.rectTransform, 0, -700, 800, 60);
 
         OpenOverlay();
+    }
+
+    // แถวเลือกเสียงพูด: ปิดเสียง / เสียง AI / เสียงคนจริง (ซ้าย/ขวา หรือคลิก)
+    private void BuildVoiceRow(float y, int rowIndex)
+    {
+        Text label = NewText("VoiceLabel", modal, "เสียงพูด", 26, Ink, TextAnchor.MiddleLeft, FontStyle.Bold);
+        Place(label.rectTransform, -292, y, 170, 50);
+        voiceTiles.Clear();
+        for (int i = 0; i < 3; i++)
+        {
+            VoiceMode mode = (VoiceMode)i;
+            Image tile = NewPanel("VoiceOption", modal, Hex(0x10203d), Hex(0x48648f), 14);
+            Place(tile.rectTransform, -95 + i * 200, y, 184, 62);
+            Text t = NewText("Label", tile.rectTransform, VoiceLabel(mode), 25, Ink, TextAnchor.MiddleCenter, FontStyle.Bold);
+            Stretch(t.rectTransform);
+            AddClick(tile.gameObject, () => { if (voiceMode != mode) CycleVoice((int)mode - (int)voiceMode); });
+            AddHover(tile.gameObject, () => SetMenuRow(rowIndex, false));
+            voiceTiles.Add(tile);
+        }
+    }
+
+    // หยุดเกมชั่วคราว (เหยียบลงค้าง / Esc): เปลี่ยนเสียงพูด เล่นต่อ หรือกลับหน้าแรก ด้วยแผ่นเหยียบได้ทั้งหมด
+    private void OpenPause()
+    {
+        if (!running || paused || overlay.activeSelf) return;
+        paused = true;
+        Time.timeScale = 0f;
+        voiceSource.Pause();
+        downHeldSince = -1f;
+        holdFill.fillAmount = 0f;
+
+        ClearModal();
+        difficultyTiles.Clear();
+        ClearMenuRows();
+        modal.sizeDelta = new Vector2(820, 520);
+        Text title = NewText("Title", modal, "หยุดชั่วคราว", 64, Cyan, TextAnchor.MiddleCenter, FontStyle.Bold);
+        Place(title.rectTransform, 0, -60, 800, 90);
+        Text desc = NewText("Desc", modal, "เวลาหยุดเดินแล้ว เล่นต่อได้ทุกเมื่อ", 26, Hex(0xcbd9e8), TextAnchor.MiddleCenter);
+        Place(desc.rectTransform, 0, -130, 780, 40);
+
+        AddMenuRow(MenuRow.Voice, -230, 86);
+        AddMenuRow(MenuRow.Buttons, -340, 90);
+        BuildVoiceRow(-230, 0);
+
+        // ออกได้ทันทีโดยไม่ต้องรอหัวใจหมด: ซ้าย = กลับหน้าแรก (เลือกระดับ) / ซ้ายสุด = ออกไปหน้าเลือกเกม
+        focusButtons.Clear(); focusActions.Clear();
+        Image exit = NewButton(modal, "ออกจากเกม", false, ExitGame);
+        Place(exit.rectTransform, -260, -340, 240, 64);
+        AddFocusButton(exit, ExitGame);
+        Image home = NewButton(modal, "กลับหน้าแรก", false, ShowHome);
+        Place(home.rectTransform, 0, -340, 240, 64);
+        AddFocusButton(home, ShowHome);
+        Image resume = NewButton(modal, "เล่นต่อ", true, ResumeGame);
+        Place(resume.rectTransform, 260, -340, 240, 64);
+        AddFocusButton(resume, ResumeGame);
+        focusIndex = 2;
+
+        Text hint = NewText("PadHint", modal, "ลง = เลื่อนแถว     ซ้าย/ขวา = เปลี่ยนค่าในแถว     ขึ้น หรือ Enter = กดปุ่มที่สว่าง     Esc = เล่นต่อ", 19, Muted, TextAnchor.MiddleCenter);
+        Place(hint.rectTransform, 0, -450, 800, 40);
+
+        OpenOverlay();
+    }
+
+    private void ResumeGame()
+    {
+        if (!paused) return;
+        paused = false;
+        overlay.SetActive(false);
+        Time.timeScale = 1f;
+        voiceSource.UnPause();
+        ClearMenuRows();
     }
 
     private void ShowResults()
@@ -819,6 +1054,7 @@ public class ArrowMemoryGame : MonoBehaviour
         showingResults = true;
         ClearModal();
         difficultyTiles.Clear();
+        ClearMenuRows();
         modal.sizeDelta = new Vector2(860, 640);
 
         int passed = Mathf.Max(0, round - 1);
@@ -882,8 +1118,7 @@ public class ArrowMemoryGame : MonoBehaviour
     private void OpenOverlay()
     {
         overlay.SetActive(true);
-        menuShownAt = Time.time;
-        lastDownTap = -10f;
+        menuShownAt = Time.unscaledTime;
     }
 
     private void ClearModal()
@@ -945,7 +1180,7 @@ public class ArrowMemoryGame : MonoBehaviour
         roundText = NewStat(shell.rectTransform, "ROUND", 1520 - 400, out _);
         timeText = NewStat(shell.rectTransform, "SECONDS", 1520 - 260, out timeStat);
 
-        // ปุ่มรูปคนพูด: กดเพื่อเปิด/ปิดเสียงคนพูดบอกทิศทาง
+        // ปุ่มรูปคนพูด: กดเพื่อเปลี่ยนเสียงพูด ปิดเสียง → เสียง AI → เสียงคนจริง (ป้ายมุมล่างบอกว่าใช้เสียงไหน)
         voiceButtonImage = NewPanel("VoiceToggle", shell.rectTransform, Color.clear, LineColor, 12, 2);
         TopLeft(voiceButtonImage.rectTransform, 1520 - 176, -24, 64, 56);
         foreach (string part in new[] { "Person", "Waves", "Slash" })
@@ -953,16 +1188,29 @@ public class ArrowMemoryGame : MonoBehaviour
             Image icon = NewImage(part, voiceButtonImage.rectTransform, part == "Person" ? personIcon : part == "Waves" ? wavesIcon : slashIcon, Cyan);
             icon.rectTransform.sizeDelta = new Vector2(38, 38);
         }
-        AddClick(voiceButtonImage.gameObject, ToggleVoice);
+        voiceBadge = NewText("Badge", voiceButtonImage.rectTransform, "", 14, Cyan, TextAnchor.LowerRight, FontStyle.Bold);
+        RectTransform badgeRt = voiceBadge.rectTransform;
+        badgeRt.anchorMin = badgeRt.anchorMax = badgeRt.pivot = new Vector2(1f, 0f);
+        badgeRt.anchoredPosition = new Vector2(-4f, 1f);
+        badgeRt.sizeDelta = new Vector2(40f, 18f);
+        AddClick(voiceButtonImage.gameObject, () => CycleVoice(1));
         TrackHover(voiceButtonImage);
         RenderVoiceButton();
 
-        // ปุ่มบ้าน: กลับหน้าแรกของเกม (เลือกระดับ)
+        // ปุ่มบ้าน: ระหว่างเล่น = หยุดเกม (เลือกเล่นต่อ/กลับหน้าแรกได้) / นอกเกม = หน้าแรก
+        // แผ่นเหยียบ: เหยียบลงค้างไว้ วงแหวนบนปุ่มนี้จะเต็มแล้วหยุดเกม
         homeButtonImage = NewPanel("HomeButton", shell.rectTransform, new Color(1, 1, 1, 0.03f), LineColor, 12, 2);
         TopLeft(homeButtonImage.rectTransform, 1520 - 98, -24, 64, 56);
+        holdFill = NewImage("HoldFill", homeButtonImage.rectTransform, roundSprite, new Color(Cyan.r, Cyan.g, Cyan.b, 0.45f));
+        holdFill.type = Image.Type.Filled;
+        holdFill.fillMethod = Image.FillMethod.Radial360;
+        holdFill.fillOrigin = (int)Image.Origin360.Top;
+        holdFill.fillClockwise = true;
+        holdFill.fillAmount = 0f;
+        Stretch(holdFill.rectTransform);
         Image homeIconImage = NewImage("Icon", homeButtonImage.rectTransform, homeIcon, Muted);
         homeIconImage.rectTransform.sizeDelta = new Vector2(34, 34);
-        AddClick(homeButtonImage.gameObject, ShowHome);
+        AddClick(homeButtonImage.gameObject, () => { if (running) OpenPause(); else ShowHome(); });
         TrackHover(homeButtonImage);
 
         Image divider = NewImage("Divider", shell.rectTransform, null, LineColor);
